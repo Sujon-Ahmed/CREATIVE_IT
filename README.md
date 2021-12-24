@@ -4,5 +4,5 @@
 PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.
 
 ### Basic PHP Syntax
-A PHP script starts with <code><span style="color:Tomato;"><?php</span></code> and ends with <code>?></code>
+A PHP script starts with <pre><?php</pre> and ends with <pre>?></pre>
 
