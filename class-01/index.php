@@ -1,5 +1,8 @@
 <?php
+// echo 'Hello World';
+// echo "My first PHP Script!";
 
-echo 'Hello World';
+$text = 'PHP';
+echo "I Love $text Programming Language";
 
 ?>
