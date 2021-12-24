@@ -4,5 +4,9 @@
 PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.
 
 ### Basic PHP Syntax
-A PHP script starts with <pre><?php</pre> and ends with <pre>?></pre>
+A PHP script starts with <?php and ends with ?>:
+The default file extension for PHP files is ".php".
+<strong>Note:</strong> PHP statements end with a semicolon (;).
+PHP Case Sensitivity
+
 
