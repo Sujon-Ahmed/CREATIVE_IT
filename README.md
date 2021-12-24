@@ -12,4 +12,8 @@ PHP Case Sensitivity
 ### Comments in PHP
 A comment in PHP code is a line that is not executed as a part of the program. Its only purpose is to be read by someone who is looking at the code.
 
+Type of Comments
+-> Single line Comments
+-> Multi line Comments
+
 
