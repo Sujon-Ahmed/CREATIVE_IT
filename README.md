@@ -30,3 +30,14 @@ A variable can have a short name (like x and y) or a more descriptive name (age,
 5. Variable names are case-sensitive ($age and $AGE are two different variables)
 
 <strong>Remember that PHP variable names are case-sensitive!</strong>
+
+<strong>PHP Variables Scope</strong>
+In PHP, variables can be declared anywhere in the script.
+
+The scope of a variable is the part of the script where the variable can be referenced/used.
+
+PHP has three different variable scopes:
+
+1. local
+2. global
+3. static

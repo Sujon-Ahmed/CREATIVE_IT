@@ -21,9 +21,27 @@ echo "My bike is " . $coLor . "<br>";   // error */
 */
 
 // PHP Variables
-$txt = "Hello World!";
-$x = 5;
-$y = 10.5;
+// $txt = "Hello World!";
+// $x = 5;
+// $y = 10.5;
+// echo $x + $y;
+// echo "<br>";
+
+// $IT = "Creative IT";
+// echo "I Love $IT";
+// echo "<br>";
+// echo "I Like " . $IT . "!";
+
+// PHP Variables Scope
+$x = 5; // global scope
+function myTest() {
+    $x = 10; // local scope
+    // using x inside this function will generate an error
+    echo "<p>Variables x inside function is $x </p>";
+}
+myTest();
+echo "<p>Variables x outside function is $x </p>";
+
 
 
 ?>
