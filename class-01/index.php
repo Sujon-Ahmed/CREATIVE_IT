@@ -33,14 +33,24 @@ echo "My bike is " . $coLor . "<br>";   // error */
 // echo "I Like " . $IT . "!";
 
 // PHP Variables Scope
-$x = 10; // global scope
+/* $x = 10; // global scope
 function myTest() {
     global $x; // local scope
     // using x inside this function will generate an error
     echo "<p>Variables x inside function is $x </p>";
 }
 myTest();
-echo "<p>Variables x outside function is $x </p>";
+echo "<p>Variables x outside function is $x </p>"; */
+
+// PHP Static Keyword
+function myTest() {
+    static $x = 0;
+    echo $x;
+    $x++;
+}
+myTest();
+echo "<br>";
+myTest();
 
 
 
