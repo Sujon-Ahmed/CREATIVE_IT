@@ -43,14 +43,14 @@ myTest();
 echo "<p>Variables x outside function is $x </p>"; */
 
 // PHP Static Keyword
-function myTest() {
-    static $x = 0;
-    echo $x;
-    $x++;
-}
-myTest();
-echo "<br>";
-myTest();
+// function myTest() {
+//     static $x = 0;
+//     echo $x;
+//     $x++;
+// }
+// myTest();
+// echo "<br>";
+// myTest();
 
 
 

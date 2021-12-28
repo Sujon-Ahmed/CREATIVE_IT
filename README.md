@@ -55,3 +55,5 @@ PHP supports the following data types:
 6. Object
 7. NULL
 8. Resource
+
+
