@@ -156,6 +156,8 @@ echo rtrim($text, "World"); */
 // * pi function 
 // echo pi();
 
-
+// * min and max function
+//echo (min(10,20,30,40,50)); // returns 10
+//echo (max(10,20,30,40,50)); // returns 50
 
 

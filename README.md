@@ -170,3 +170,9 @@ The <b>pi()</b> function returns the value of PI:
 <pre>
 echo (pi());    //returns 3.1415926535898
 </pre>
+
+The <b>min()</b> and <b>max()</b> functions can be used to find the lowest or highest value in a list of arguments:
+<pre>
+echo(min(0, 150, 30, 20, -8, -200));  // returns -200
+echo(max(0, 150, 30, 20, -8, -200));  // returns 150
+</pre>
