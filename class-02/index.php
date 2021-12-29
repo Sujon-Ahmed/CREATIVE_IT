@@ -44,9 +44,12 @@ $change = "Sujon";
 // echo str_replace($place, $change, $text);
 
 // md5() function 
-$password = "hello9090";
+/* $password = "hello9090";
 echo md5($password);
-echo "<br>";
+echo "<br>"; */
+
 // password_hash() function is best cause it's changeable every times.
-$pass = "hello9090";
-echo password_hash($pass, PASSWORD_DEFAULT);
+/* $pass = "hello9090";
+echo password_hash($pass, PASSWORD_DEFAULT); */
+
+

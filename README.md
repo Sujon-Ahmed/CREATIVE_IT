@@ -59,12 +59,15 @@ PHP supports the following data types:
 ## Class-02     [28-12-2021]
 ### PHP String
 <strong>strlen()</strong> - Return the Length of a String
+
 Example : echo strlen("Hello World");   // return 11
 
 <strong>str_word_count()</strong> function counts the number of words in a string.
+
 Example : echo str_word_count("Hello World");   // return 2
 
 <strong>strrev()</strong> function reverses a string
+
 Example : echo strrev("Hello");     // return ollew
 
 <strong>strpos()</strong> - Search For a Text Within a String
@@ -74,4 +77,8 @@ Example : echo strpos("hello world", "r");
 
 <strong>str_replace() </strong>function replaces some characters with some other characters in a string.
 
+<pre>
+    $text = "Hello World";
+    echo str_replace('World', 'Sujon', $text);
+</pre>
 
