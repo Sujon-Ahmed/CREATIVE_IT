@@ -58,6 +58,13 @@ echo $myCar->message(); */
 // echo str_replace('World','Sujon', $text);
 // echo str_replace($place, $change, $text);
 
+
+// ? str_ireplace() function
+/* 
+* The str_ireplace() function replaces some characters with some other characters in a string.
+*/
+// echo str_ireplace("WORLD","Peter", "Hello World!");
+
 // ? md5() function 
 /* 
 * md5() function calculates the MD5 hash of a string.
@@ -98,6 +105,6 @@ echo ltrim($text, "Hello");
 /* 
 * The rtrim() function removes whitespace or other predefined characters from the right side of a string.
 */
-$text = "Hello World";
+/* $text = "Hello World";
 echo $text."<br>";
-echo rtrim($text, "World");
+echo rtrim($text, "World"); */

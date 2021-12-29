@@ -87,6 +87,13 @@ $text = "Hello World";
 echo str_replace('World', 'Sujon', $text);
 </pre>
 
+The <strong>str_ireplace()</strong> function replaces some characters with some other characters in a string.
+<pre>
+echo str_ireplace("WORLD","Peter","Hello World!");
+</pre>
+<strong>Note : </strong>The function is case-insensitive.
+<strong>Note : </strong>This function is binary-safe.
+
 The <strong>md5</strong> function calculates the MD5 hash of a string.
 <pre>
 $password = "hello9090";
