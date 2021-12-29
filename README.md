@@ -164,3 +164,9 @@ echo substr($text,1);   // return ello World
 </pre>
 substr($string,start,length);
 <b>return ello World cause, start 1 index</b>
+
+## PHP Math
+The <b>pi()</b> function returns the value of PI:
+<pre>
+echo (pi());    //returns 3.1415926535898
+</pre>

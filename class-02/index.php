@@ -151,3 +151,11 @@ echo rtrim($text, "World"); */
 */
 // $message = "This is simple message for you!";
 // echo substr($message,0,20)."...";
+
+// ? PHP Math
+// * pi function 
+// echo pi();
+
+
+
+
