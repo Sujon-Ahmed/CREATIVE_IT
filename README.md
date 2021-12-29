@@ -107,3 +107,10 @@ $text = "Creative IT";
 $text = trim($text);
 var_dump($text);
 </pre>
+
+The <strong>ltrim()</strong> function removes whitespace or other predefined characters from the left side of a string.
+<pre>
+$text = "Hello World!";
+echo ltrim($text, "Hello");     // return World!
+</pre>
+
