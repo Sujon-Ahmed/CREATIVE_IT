@@ -59,21 +59,26 @@ PHP supports the following data types:
 ## Class-02     [28-12-2021]
 ### PHP String
 <strong>strlen()</strong> - Return the Length of a String
-
-Example : echo strlen("Hello World");   // return 11
+<pre>
+    echo strlen("Hello World");   // return 11
+</pre>
 
 <strong>str_word_count()</strong> function counts the number of words in a string.
-
-Example : echo str_word_count("Hello World");   // return 2
+<pre>
+echo str_word_count("Hello World");   // return 2
+</pre>
 
 <strong>strrev()</strong> function reverses a string
-
-Example : echo strrev("Hello");     // return ollew
+<pre>
+    echo strrev("Hello");     // return ollew
+</pre>
 
 <strong>strpos()</strong> - Search For a Text Within a String
 The PHP strpos() function searches for a specific text within a string. If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.
 
-Example : echo strpos("hello world", "r");
+<pre>
+    echo strpos("hello world", "r");
+</pre>
 
 <strong>str_replace() </strong>function replaces some characters with some other characters in a string.
 
