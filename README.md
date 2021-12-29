@@ -165,7 +165,7 @@ echo substr($text,1);   // return ello World
 substr($string,start,length);
 <b>return ello World cause, start 1 index</b>
 
-## PHP Math
+### PHP Math
 The <b>pi()</b> function returns the value of PI:
 <pre>
 echo (pi());    //returns 3.1415926535898
@@ -193,3 +193,6 @@ echo (round(5.5));  // returns 6 cause .5 to round() return next number Ex:- 3.4
 </pre>
 
 The <b>rand()</b> function generates a random number:
+<pre>
+echo (rand(1,10)); // return 1-10 any number
+</pre>
