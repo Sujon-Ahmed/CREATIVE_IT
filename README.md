@@ -181,3 +181,5 @@ The <b>abs()</b> function returns the absolute (positive) value of a number:
 <pre>
 echo (abs(-6.7));   // returns 6.7
 </pre>
+
+The <b>sqrt()</b> function returns the square root of a number:

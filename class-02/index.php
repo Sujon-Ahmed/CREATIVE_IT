@@ -163,4 +163,8 @@ echo rtrim($text, "World"); */
 // * abs() function
 //echo (abs(-6.7));   // return 6.7
 
+// * sqrt() function
+//echo (sqrt(64));    // returns 8
+
+
 
