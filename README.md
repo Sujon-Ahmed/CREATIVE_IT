@@ -126,3 +126,8 @@ The <strong>rtrim()</strong> function removes whitespace or other predefined cha
 $text = "Hello World!";
 echo rtrim($text, "World");     // return Hello
 </pre>
+
+The <strong>str_repeat()</strong> function repeats a string a specified number of times.
+<pre>
+echo str_repeat("Sujon",5);     // return Sujon 5 times
+</pre>

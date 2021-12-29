@@ -108,3 +108,9 @@ echo ltrim($text, "Hello");
 /* $text = "Hello World";
 echo $text."<br>";
 echo rtrim($text, "World"); */
+
+// ? str_repeat() function
+/* 
+* The str_repeat() function repeats a string a specified number of times.
+*/
+// echo str_repeat("Sujon <br>",5); // repeat Sujon 5 times
