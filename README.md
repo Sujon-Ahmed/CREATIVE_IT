@@ -131,3 +131,28 @@ The <strong>str_repeat()</strong> function repeats a string a specified number o
 <pre>
 echo str_repeat("Sujon",5);     // return Sujon 5 times
 </pre>
+
+The <strong>strtoupper()</strong> function converts a string to uppercase.
+<pre>
+echo strtoupper("hello world");     // return HELLO WORLD
+</pre>
+
+The <strong>strtolower()</strong> function converts a string to lowercase.
+<pre>
+echo strtolower("HELLO WORLD");     // return hello world
+</pre>
+
+The <strong>lcfirst()</strong> function converts the first character of a string to lowercase.
+<pre>
+echo lcfirst("HELLO WORLD");    // return hELLO WORLD
+</pre>
+
+The <strong>ucfirst()</strong> function converts the first character of a string to uppercase.
+<pre>
+echo ucfirst("hello world");    // Hello world
+</pre>
+
+The <strong>ucwords()</strong> function converts the first character of each word in a string to uppercase 
+<pre>
+echo ucwords("hello world");    // Hello World
+</pre>

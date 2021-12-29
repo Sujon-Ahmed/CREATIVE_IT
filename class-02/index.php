@@ -114,3 +114,33 @@ echo rtrim($text, "World"); */
 * The str_repeat() function repeats a string a specified number of times.
 */
 // echo str_repeat("Sujon <br>",5); // repeat Sujon 5 times
+
+// ? strtoupper() function
+/*  
+* converts a string to uppercase. 
+*/
+// echo strtoupper("hello world");
+
+// ? strtolower() 
+/* 
+* converts a string to lowercase 
+*/
+// echo strtolower("HELLO WORLD");
+
+// ? lcfirst() function
+/* 
+* converts the first character of a string to lowercase 
+*/
+// echo lcfirst("Hello World");
+
+// ? ucfirst() function
+/* 
+* converts the first character of a string to uppercase 
+*/
+// echo ucfirst("hello world");
+
+// ? ucwords() function
+/* 
+* converts the first character of each word in a string to uppercase 
+*/
+// echo ucwords("hello world");
