@@ -170,7 +170,9 @@ echo rtrim($text, "World"); */
 // echo (round(5.5));   // returns 6
 
 // * rand() function
-echo (rand(1,10));
+// echo (rand(1,10));
+
+
 
 
 
