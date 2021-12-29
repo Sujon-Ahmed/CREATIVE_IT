@@ -60,7 +60,7 @@ PHP supports the following data types:
 ### PHP String
 <strong>strlen()</strong> - Return the Length of a String
 <pre>
-    echo strlen("Hello World");   // return 11
+echo strlen("Hello World");   // return 11
 </pre>
 
 <strong>str_word_count()</strong> function counts the number of words in a string.
@@ -70,20 +70,26 @@ echo str_word_count("Hello World");   // return 2
 
 <strong>strrev()</strong> function reverses a string
 <pre>
-    echo strrev("Hello");     // return ollew
+echo strrev("Hello");     // return ollew
 </pre>
 
 <strong>strpos()</strong> - Search For a Text Within a String
 The PHP strpos() function searches for a specific text within a string. If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.
 
 <pre>
-    echo strpos("hello world", "r");
+echo strpos("hello world", "r");
 </pre>
 
 <strong>str_replace() </strong>function replaces some characters with some other characters in a string.
 
 <pre>
-    $text = "Hello World";
-    echo str_replace('World', 'Sujon', $text);
+$text = "Hello World";
+echo str_replace('World', 'Sujon', $text);
 </pre>
 
+The <strong>md5</strong> function calculates the MD5 hash of a string.
+<pre>
+$password = "hello9090";
+echo md5($password);
+</pre>
+<strong>Notes : </strong>The md5() function uses the RSA Data Security, Inc. MD5 Message-Digest Algorithm.
