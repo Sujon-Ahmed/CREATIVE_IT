@@ -153,11 +153,14 @@ echo rtrim($text, "World"); */
 // echo substr($message,0,20)."...";
 
 // ? PHP Math
-// * pi function 
-// echo pi();
+// * pi() function 
+//echo (pi());     // return 3.1415926535898
 
-// * min and max function
+// * min() and max() function
 //echo (min(10,20,30,40,50)); // returns 10
 //echo (max(10,20,30,40,50)); // returns 50
+
+// * abs() function
+//echo (abs(-6.7));   // return 6.7
 
 
