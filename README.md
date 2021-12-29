@@ -191,3 +191,5 @@ The <b>round()</b> function rounds a floating-point number to its nearest intege
 <pre>
 echo (round(5.5));  // returns 6 cause .5 to round() return next number Ex:- 3.4 -> 3, 4.5-> 5 etc.
 </pre>
+
+The <b>rand()</b> function generates a random number:
