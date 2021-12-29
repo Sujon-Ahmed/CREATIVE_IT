@@ -23,9 +23,9 @@ echo $myCar->message(); */
 
 // PHP String
 
-$text = "Hello World";
-$place = "World";
-$change = "Sujon";
+// $text = "Hello World";
+// $place = "World";
+// $change = "Sujon";
 
 // strlen() function returns the length of a string
 // echo strlen($text);
@@ -54,4 +54,10 @@ echo password_hash($pass, PASSWORD_DEFAULT);
 echo "<br>";
 echo password_hash($pass, PASSWORD_BCRYPT); */
 
+/* $text = "    Creative IT           ";
+echo $text = trim($text);
+echo "<br>";
+var_dump($text);
+ */
 
+ 

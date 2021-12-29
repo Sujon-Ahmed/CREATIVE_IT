@@ -100,3 +100,10 @@ $password = "hello9090";
 echo password_hash($password, PASSWORD_DEFAULT);
 echo password_hash($password, PASSWORD_BCRYPT);
 </pre>
+
+The <strong>trim()</strong> function removes whitespace and other predefined characters from both sides of a string.
+<pre>
+$text = "Creative IT";
+$text = trim($text);
+var_dump($text);
+</pre>
