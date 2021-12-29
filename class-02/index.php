@@ -50,6 +50,8 @@ echo "<br>"; */
 
 // password_hash() function is best cause it's changeable every times.
 /* $pass = "hello9090";
-echo password_hash($pass, PASSWORD_DEFAULT); */
+echo password_hash($pass, PASSWORD_DEFAULT);
+echo "<br>";
+echo password_hash($pass, PASSWORD_BCRYPT); */
 
 

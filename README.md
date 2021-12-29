@@ -93,3 +93,10 @@ $password = "hello9090";
 echo md5($password);
 </pre>
 <strong>Notes : </strong>The md5() function uses the RSA Data Security, Inc. MD5 Message-Digest Algorithm.
+
+<strong>password_hash() </strong>creates a new password hash using a strong one-way hashing algorithm
+<pre>
+$password = "hello9090";
+echo password_hash($password, PASSWORD_DEFAULT);
+echo password_hash($password, PASSWORD_BCRYPT);
+</pre>
