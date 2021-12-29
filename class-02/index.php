@@ -42,3 +42,11 @@ $change = "Sujon";
 // str_replace() function replaces some characters with some other characters in a string.
 // echo str_replace('World','Sujon', $text);
 // echo str_replace($place, $change, $text);
+
+// md5() function 
+$password = "hello9090";
+echo md5($password);
+echo "<br>";
+// password_hash() function is best cause it's changeable every times.
+$pass = "hello9090";
+echo password_hash($pass, PASSWORD_DEFAULT);
