@@ -183,3 +183,11 @@ echo (abs(-6.7));   // returns 6.7
 </pre>
 
 The <b>sqrt()</b> function returns the square root of a number:
+<pre>
+echo (sqrt(64));    // return 8
+</pre>
+
+The <b>round()</b> function rounds a floating-point number to its nearest integer:
+<pre>
+echo (round(5.5));  // returns 6 cause .5 to round() return next number Ex:- 3.4 -> 3, 4.5-> 5 etc.
+</pre>

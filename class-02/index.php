@@ -166,5 +166,8 @@ echo rtrim($text, "World"); */
 // * sqrt() function
 //echo (sqrt(64));    // returns 8
 
+// * round() function
+// echo (round(5.5));   // returns 6
+
 
 
