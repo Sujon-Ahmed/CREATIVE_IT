@@ -156,3 +156,11 @@ The <strong>ucwords()</strong> function converts the first character of each wor
 <pre>
 echo ucwords("hello world");    // Hello World
 </pre>
+
+The <strong>substr()</strong> function returns a part of a string.
+<pre>
+$text = "Hello World";
+echo substr($text,1);   // return ello World
+</pre>
+substr($string,start,length);
+<b>return ello World cause, start 1 index</b>

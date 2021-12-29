@@ -144,3 +144,10 @@ echo rtrim($text, "World"); */
 * converts the first character of each word in a string to uppercase 
 */
 // echo ucwords("hello world");
+
+// ? substr() function
+/* 
+* substr() function is a part of string
+*/
+// $message = "This is simple message for you!";
+// echo substr($message,0,20)."...";
