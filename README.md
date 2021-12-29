@@ -114,3 +114,8 @@ $text = "Hello World!";
 echo ltrim($text, "Hello");     // return World!
 </pre>
 
+The <strong>rtrim()</strong> function removes whitespace or other predefined characters from the right side of a string.
+<pre>
+$text = "Hello World!";
+echo rtrim($text, "World");     // return Hello
+</pre>

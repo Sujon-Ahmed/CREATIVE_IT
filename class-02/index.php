@@ -87,8 +87,17 @@ var_dump($text);
 
 // ? ltrim() function
 /* 
-*   The ltrim() function removes whitespace or other predefined characters from the left side of a string.
+* The ltrim() function removes whitespace or other predefined characters from the left side of a string.
+*/
+/* $text = "Hello World";
+echo $text."<br>";
+echo ltrim($text, "Hello");
+ */
+
+//  ? rtrim() function
+/* 
+* The rtrim() function removes whitespace or other predefined characters from the right side of a string.
 */
 $text = "Hello World";
 echo $text."<br>";
-echo ltrim($text, "Hello");
+echo rtrim($text, "World");
