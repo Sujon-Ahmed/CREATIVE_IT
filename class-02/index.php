@@ -190,13 +190,20 @@ echo rtrim($text, "World"); */
 echo cars[0]; */
 
 // * Constants are global
-define("GREETING", "This is global Constants");
+/* define("GREETING", "This is global Constants");
 function myFun() {
     echo GREETING;
     echo "<br>";
 }
 myFun();
-myFun();
+myFun(); */
+
+
+
+
+
+
+
 
 
 

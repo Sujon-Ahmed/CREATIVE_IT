@@ -250,12 +250,13 @@ myFun();
 ### PHP Operators
 Operators are used to perform operations on variables and values.
 
-▶   Arithmetic Operators
-<img src="../class-02/operators-img/Screenshot_14.png" alt="Arithmetic">
-▶   Assignment Operators
-▶   Comparison Operators
-▶   Increment/Decrement Operators
-▶   Logical Operators
-▶   String Operators
-▶   Array Operators
+<b>Note : </b> open operator-img folder then you can see all operators table chart. <br>
+
+▶   Arithmetic Operators <br>
+▶   Assignment Operators <br>
+▶   Comparison Operators <br>
+▶   Increment/Decrement Operators <br>
+▶   Logical Operators <br>
+▶   String Operators <br>
+▶   Array Operators <br>
 ▶   Conditional Assignment Operators
