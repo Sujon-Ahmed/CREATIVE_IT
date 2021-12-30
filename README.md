@@ -246,3 +246,16 @@ function myFun() {
 myFun();
 myFun();
 </pre>
+
+### PHP Operators
+Operators are used to perform operations on variables and values.
+
+▶   Arithmetic Operators
+<img src="../operators-img/Screenshot_14.png" alt="Arithmetic">
+▶   Assignment Operators
+▶   Comparison Operators
+▶   Increment/Decrement Operators
+▶   Logical Operators
+▶   String Operators
+▶   Array Operators
+▶   Conditional Assignment Operators
