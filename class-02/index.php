@@ -172,6 +172,32 @@ echo rtrim($text, "World"); */
 // * rand() function
 // echo (rand(1,10));
 
+// ? PHP Constants
+// * with case-sensitive
+// define("GREETING", "This Constants message case-sensitive");
+// echo GREETING;
+
+// * with case-insensitive
+// define("GREETING", "This Constants message case-insensitive", true);
+// echo greeting;
+
+// * PHP Constants Array
+/* define("cars",[
+    "BMW",
+    "TOYOTA",
+    "Ferrari"
+]); 
+echo cars[0]; */
+
+// * Constants are global
+define("GREETING", "This is global Constants");
+function myFun() {
+    echo GREETING;
+    echo "<br>";
+}
+myFun();
+myFun();
+
 
 
 

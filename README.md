@@ -196,3 +196,53 @@ The <b>rand()</b> function generates a random number:
 <pre>
 echo (rand(1,10)); // return 1-10 any number
 </pre>
+
+### PHP Constants
+A constant is an identifier (name) for a simple value. The value cannot be changed during the script.
+
+A valid constant name starts with a letter or underscore (no $ sign before the constant name).
+
+<b>Note:</b> Unlike variables, constants are automatically global across the entire script.
+
+To create a constant, use the define() function.
+
+<i>define(name, value, case-insensitive)</i>
+
+Parameters:
+
+✔ name: Specifies the name of the constant
+✔ value: Specifies the value of the constant
+✔ case-insensitive: Specifies whether the constant name should be case-insensitive. Default is false
+
+Example: Create a constant with a case-sensitive name:
+<pre>
+define("GREETING", "Welcome to home page");
+echo GREETING;
+</pre>
+
+Example: Create a constant with a case-insensitive name:
+<pre>
+define("GREETING", "Welcome to home page", true);
+echo greeting;
+</pre>
+
+PHP constants array:
+<pre>
+define("cars",[
+    "BMW",
+    "TOYOTA",
+    "Ferrari"
+]); 
+echo cars[0];
+</pre>
+
+PHP global Constants:
+<pre>
+define("GREETING", "This is global Constants");
+function myFun() {
+    echo GREETING;
+    echo "<br>";
+}
+myFun();
+myFun();
+</pre>
