@@ -250,7 +250,7 @@ myFun();
 ### PHP Operators
 Operators are used to perform operations on variables and values.
 
-<b>Note : </b> open operator-img folder then you can see all operators table chart. <br>
+<b>Note : </b> Open class-02/operators-img folder then you can see all operators table chart. <br>
 
 ▶   Arithmetic Operators <br>
 ▶   Assignment Operators <br>
