@@ -251,7 +251,7 @@ myFun();
 Operators are used to perform operations on variables and values.
 
 ▶   Arithmetic Operators
-<img src="../operators-img/Screenshot_14.png" alt="Arithmetic">
+<img src="../class-02/operators-img/Screenshot_14.png" alt="Arithmetic">
 ▶   Assignment Operators
 ▶   Comparison Operators
 ▶   Increment/Decrement Operators
