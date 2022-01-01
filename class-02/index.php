@@ -199,12 +199,23 @@ myFun();
 myFun(); */
 
 // ? PHP Function
-// declare a function
-function writeMsg() {
+// * declare a function
+/* function writeMsg() {
     echo "Hello World!";
+} */
+// call the function
+// writeMsg();
+
+// * declare a function with arguments
+function familyName($name) {
+    echo $name."<br>";
 }
 // call the function
-writeMsg();
+familyName("Sujon Ahmed");
+
+
+
+
 
 
 
