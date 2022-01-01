@@ -207,14 +207,28 @@ myFun(); */
 // writeMsg();
 
 // * declare a function with arguments
-function familyName($name,$years) {
-    echo "$name born in $years <br>";
-}
+// function familyName($name,$years) {
+//     echo "$name born in $years <br>";
+// }
 // call the function
-familyName("Sujon Ahmed",2000);
-familyName("Toukir Ahmed",2001);
-familyName("Alamin Islam",2002);
+// familyName("Sujon Ahmed",2000);
+// familyName("Toukir Ahmed",2001);
+// familyName("Alamin Islam",2002);
 
+// * PHP is a Loosely Typed Language
+/* function addNumbers($a,$b) {
+    $result = $a + $b;
+    echo "Result is : $result <br>";
+}
+addNumbers(15,20);
+addNumbers(100,"200"); */
+
+function setHeight(int $minHeight = 50) {
+    echo "The height is : $minHeight <br>";
+}
+setHeight();
+setHeight(150);
+setHeight(250);
 
 
 
