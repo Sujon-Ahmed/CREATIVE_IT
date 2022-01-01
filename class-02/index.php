@@ -198,7 +198,13 @@ function myFun() {
 myFun();
 myFun(); */
 
-
+// ? PHP Function
+// declare a function
+function writeMsg() {
+    echo "Hello World!";
+}
+// call the function
+writeMsg();
 
 
 
