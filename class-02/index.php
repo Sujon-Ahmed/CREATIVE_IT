@@ -207,11 +207,13 @@ myFun(); */
 // writeMsg();
 
 // * declare a function with arguments
-function familyName($name) {
-    echo $name."<br>";
+function familyName($name,$years) {
+    echo "$name born in $years <br>";
 }
 // call the function
-familyName("Sujon Ahmed");
+familyName("Sujon Ahmed",2000);
+familyName("Toukir Ahmed",2001);
+familyName("Alamin Islam",2002);
 
 
 
