@@ -260,3 +260,17 @@ Operators are used to perform operations on variables and values.
 ▶   String Operators <br>
 ▶   Array Operators <br>
 ▶   Conditional Assignment Operators
+
+### PHP Function
+The real power of PHP comes from its functions.
+PHP has more than 1000 built-in functions, and in addition you can create your own custom functions.
+
+Type of Function- <br>
+1. Built-in Function <br>
+PHP has over 1000 built-in functions that can be called directly, from within a script, to perform a specific task. <br>
+2. User Defined Function  <br>
+Besides the built-in PHP functions, it is possible to create your own functions. <br>
+
+🟢 A function is a block of statements that can be used repeatedly in a program. <br>
+🟢 A function will not execute automatically when a page loads. <br>
+🟢 A function will be executed by a call to the function.
