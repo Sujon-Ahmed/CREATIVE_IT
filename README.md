@@ -274,3 +274,16 @@ Besides the built-in PHP functions, it is possible to create your own functions.
 🟢 A function is a block of statements that can be used repeatedly in a program. <br>
 🟢 A function will not execute automatically when a page loads. <br>
 🟢 A function will be executed by a call to the function.
+
+## Class-03     [30-12-2021]
+### PHP Loops
+Often when you write code, you want the same block of code to run over and over again a certain number of times. So, instead of adding several almost equal code-lines in a script, we can use loops. 
+
+Loops are used to execute the same block of code again and again, as long as a certain condition is true.
+
+In PHP, we have the following loop types:
+
+◼ <code>while</code> - loops through a block of code as long as the specified condition is true <br>
+◼ <code>do...while</code> - loops through a block of code once, and then repeats the loop as long as the specified condition is true <br>
+◼ <code>for</code> - loops through a block of code a specified number of times <br>
+◼ <code>foreach</code> - loops through a block of code for each element in an array <br>
