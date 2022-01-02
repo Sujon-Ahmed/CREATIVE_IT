@@ -330,8 +330,8 @@ An array is a special variable, which can hold more than one value at a time.
 
 In PHP, there are three types of arrays:
 
-<b>Indexed arrays</b> - Arrays with a numeric index
-<b>Associative arrays</b> - Arrays with named keys
+<b>Indexed arrays</b> - Arrays with a numeric index <br>
+<b>Associative arrays</b> - Arrays with named keys <br>
 <b>Multidimensional arrays</b> - Arrays containing one or more arrays
 
 
