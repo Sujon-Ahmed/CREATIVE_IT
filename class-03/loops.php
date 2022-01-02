@@ -16,11 +16,16 @@
         } */
 
         // ? do while loop
-        $i = 1;
+       /*  $i = 1;
         do{
             echo "The number is $i <br>";
             $i++;
-        }while($i <= 5);
+        }while($i <= 5); */
+
+        // ? for loop
+        for($i = 1; $i <= 5; $i++) {
+            echo "The number is $i <br>";
+        }
 
 
     ?>

@@ -304,6 +304,13 @@ do{
 </code>
 </pre>
 ◼ <code>for</code> - loops through a block of code a specified number of times <br>
+<pre>
+<code>
+for($i = 1; $i <= 5; $i++) {
+    echo "The number is $i <br>";
+}
+</code>
+</pre>
 ◼ <code>foreach</code> - loops through a block of code for each element in an array <br>
 
 
