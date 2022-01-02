@@ -39,7 +39,13 @@ foreach($cars as $row) {
 echo "</table>"; */
 
 // * Sorting Array
-
+$cars = array('BMW', 'TOYOTA', 'Ferrari', 'Saab');
+sort($cars);
+$cars_length = count($cars);
+for($x = 0; $x < $cars_length; $x++) {
+    echo $cars[$x];
+    echo "<br>";
+}
 
 
 
