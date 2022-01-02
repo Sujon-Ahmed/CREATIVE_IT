@@ -284,6 +284,17 @@ Loops are used to execute the same block of code again and again, as long as a c
 In PHP, we have the following loop types:
 
 ◼ <code>while</code> - loops through a block of code as long as the specified condition is true <br>
+<pre>
+<code>
+$i = 0;
+while($i <= 10) {
+    echo $i."<br>";
+    $i++;
+}
+</code>
+</pre>
 ◼ <code>do...while</code> - loops through a block of code once, and then repeats the loop as long as the specified condition is true <br>
 ◼ <code>for</code> - loops through a block of code a specified number of times <br>
 ◼ <code>foreach</code> - loops through a block of code for each element in an array <br>
+
+
