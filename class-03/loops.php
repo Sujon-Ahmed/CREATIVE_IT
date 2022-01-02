@@ -28,11 +28,28 @@
         } */
 
         // ? foreach loop
-        $colors = ['red', 'green', 'yellow', 'blue', 'orange'];
+        /* $colors = ['red', 'green', 'yellow', 'blue', 'orange'];
         foreach($colors as $item) {
             echo "$item <br>";
-        }
+        } */
 
+        // Associative Array with foreach loop
+      /*   $person = ['Sujon' => 22, 'Riman' => 21];
+        foreach($person as $name => $age) {
+            echo "$name is $age years old.<br>";
+        }
+        */
+
+        // ? Break / Continue
+
+        for($i = 1; $i <= 10; $i++) {
+            if($i == 4) {
+                // break;
+                // continue;
+            }else {
+                echo "$i <br>";
+            }
+        }
 
     ?>
     <!-- <div style="background-color: #ddd; padding: 20px">
