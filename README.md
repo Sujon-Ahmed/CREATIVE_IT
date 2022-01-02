@@ -294,6 +294,15 @@ while($i <= 10) {
 </code>
 </pre>
 ◼ <code>do...while</code> - loops through a block of code once, and then repeats the loop as long as the specified condition is true <br>
+<pre>
+<code>
+$i = 1;
+do{
+    echo "The Number is $i <br>";
+    $i++;
+}while($i <= 5);
+</code>
+</pre>
 ◼ <code>for</code> - loops through a block of code a specified number of times <br>
 ◼ <code>foreach</code> - loops through a block of code for each element in an array <br>
 

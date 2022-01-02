@@ -8,12 +8,21 @@
 </head>
 <body>
     <?php
-    // while loop
-        $i = 1;
+        // ? while loop
+        /* $i = 1;
         while($i <= 10) {
             echo $i."<br>";
             $i++;
-        }
+        } */
+
+        // ? do while loop
+        $i = 1;
+        do{
+            echo "The number is $i <br>";
+            $i++;
+        }while($i <= 5);
+
+
     ?>
     <!-- <div style="background-color: #ddd; padding: 20px">
         <table width="250" cellpadding="0" cellspacing="0" border="0" align="center"> 
