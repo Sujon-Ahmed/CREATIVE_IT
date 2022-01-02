@@ -23,8 +23,14 @@
         }while($i <= 5); */
 
         // ? for loop
-        for($i = 1; $i <= 5; $i++) {
+        /* for($i = 1; $i <= 5; $i++) {
             echo "The number is $i <br>";
+        } */
+
+        // ? foreach loop
+        $colors = ['red', 'green', 'yellow', 'blue', 'orange'];
+        foreach($colors as $item) {
+            echo "$item <br>";
         }
 
 

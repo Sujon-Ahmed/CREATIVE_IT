@@ -312,5 +312,13 @@ for($i = 1; $i <= 5; $i++) {
 </code>
 </pre>
 ◼ <code>foreach</code> - loops through a block of code for each element in an array <br>
+<pre>
+<code>
+$colors = ['red', 'green', 'yellow', 'blue', 'orange'];
+foreach($colors as $item) {
+    echo "$item <br>";
+}
+</code>
+</pre>
 
 
