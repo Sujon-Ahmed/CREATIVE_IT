@@ -336,7 +336,8 @@ In PHP, there are three types of arrays:
 
 #### Sort Functions For Arrays
 <code>sort()</code> - sort arrays in ascending order <br>
-<code>rsort()</code> - sort arrays in descending order
+<code>rsort()</code> - sort arrays in descending order <br>
+<code>asort()</code> - sort associative arrays in ascending order, according to the value
 
 
 

@@ -50,8 +50,17 @@ for($x = 0; $x < $cars_length; $x++) {
  */
 
 // * rsort array
-$numbers = array(4, 2, 6, 11, 9);
+/* $numbers = array(4, 2, 6, 11, 9);
 rsort($numbers);
+$num_len = count($numbers);
+for($i = 0; $i < $num_len; $i++) {
+    echo $numbers[$i];
+    echo "<br>";
+} */
+
+// * asort array
+$numbers = array(4, 2, 6, 11, 9);
+asort($numbers);
 $num_len = count($numbers);
 for($i = 0; $i < $num_len; $i++) {
     echo $numbers[$i];
