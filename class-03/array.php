@@ -15,7 +15,7 @@ foreach($info as $name => $age) {
 } */
 
 // * Multidimensional Array 
-echo "<table border='1' cellpadding='5' cellspacing='0' width='50%'>";
+/* echo "<table border='1' cellpadding='5' cellspacing='0' width='50%'>";
 echo "<tr>
     <th>Name</th>
     <th>Stock</th>
@@ -36,7 +36,10 @@ foreach($cars as $row) {
     }
     echo "</td>";
 }
-echo "</table>";
+echo "</table>"; */
+
+// * Sorting Array
+
 
 
 
