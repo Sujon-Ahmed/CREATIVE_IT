@@ -38,14 +38,24 @@ foreach($cars as $row) {
 }
 echo "</table>"; */
 
-// * Sorting Array
-$cars = array('BMW', 'TOYOTA', 'Ferrari', 'Saab');
+// ? Sorting Array
+// * sort array
+/* $cars = array('BMW', 'TOYOTA', 'Ferrari', 'Saab');
 sort($cars);
 $cars_length = count($cars);
 for($x = 0; $x < $cars_length; $x++) {
     echo $cars[$x];
     echo "<br>";
 }
+ */
 
+// * rsort array
+$numbers = array(4, 2, 6, 11, 9);
+rsort($numbers);
+$num_len = count($numbers);
+for($i = 0; $i < $num_len; $i++) {
+    echo $numbers[$i];
+    echo "<br>";
+}
 
 
