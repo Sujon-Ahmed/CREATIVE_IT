@@ -321,4 +321,18 @@ foreach($colors as $item) {
 </code>
 </pre>
 
+### PHP Array
+An array stores multiple values in one single variable:
+
+An array is a special variable, which can hold more than one value at a time.
+
+<b>In PHP, the <code>array()</code> function is used to create an array:</b>
+
+In PHP, there are three types of arrays:
+
+<b>Indexed arrays</b> - Arrays with a numeric index
+<b>Associative arrays</b> - Arrays with named keys
+<b>Multidimensional arrays</b> - Arrays containing one or more arrays
+
+
 
