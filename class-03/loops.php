@@ -7,7 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="background-color: #ddd; padding: 20px">
+    <?php
+    // while loop
+        $i = 1;
+        while($i <= 10) {
+            echo $i."<br>";
+            $i++;
+        }
+    ?>
+    <!-- <div style="background-color: #ddd; padding: 20px">
         <table width="250" cellpadding="0" cellspacing="0" border="0" align="center"> 
             <?php for($row = 1; $row <= 8; $row++){ ?>
                 <tr>
@@ -22,6 +30,6 @@
                 </tr>
             <?php } ?>
         </table>
-    </div>
+    </div> -->
 </body>
 </html>
