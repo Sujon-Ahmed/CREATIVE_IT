@@ -79,7 +79,7 @@ require_once 'include/header.php';
                                             <?php
                                         }unset($_SESSION['confirm_password_error']);
                                     ?>
-                                    <div class="input-group mt-2">
+                                    <div class="input-group mt-3">
                                         <input type="submit" class="button" value="Login" name="submit" >
                                     </div>
                                 </form>

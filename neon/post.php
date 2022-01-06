@@ -18,6 +18,9 @@ $pass_lower = preg_match($pattern,$password);
 $pass_special = preg_match($pattern,$password);
 // password hash
 $after_hash = password_hash($password, PASSWORD_BCRYPT);
+// created_at 
+date_default_timezone_set('Asia/Dhaka');
+$created = date('y-m-d h:i:s');
 
 // condition with validating all field
 if(empty($name)) {
@@ -46,7 +49,7 @@ if(empty($name)) {
     header('location:register.php');
 } else {
     // insert data 
-    $insert_data = "INSERT INTO `users`(`name`,`email`,`password`)VALUES('$name','$email','$after_hash')"; 
+    $insert_data = "INSERT INTO `users`(`name`,`email`,`password`,`created_at`)VALUES('$name','$email','$after_hash','$created')"; 
     $result = mysqli_query($con,$insert_data);
     $_SESSION['insert_success'] = "Registration Success!";
     header('location:register.php');
