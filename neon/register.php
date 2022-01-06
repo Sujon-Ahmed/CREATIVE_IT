@@ -23,6 +23,14 @@ require_once 'include/header.php';
                                             <?php
                                         }unset($_SESSION['insert_success']); ?>
                                     </span>
+                                    <!-- show email exist warning message -->
+                                    <span>
+                                        <?php if(isset($_SESSION['email_exist'])) {
+                                            ?>
+                                                <span style="color: red;font-weight:bold;"><?php echo $_SESSION['email_exist']; ?></span>
+                                            <?php
+                                        }unset($_SESSION['email_exist']); ?>
+                                    </span>
                                 </div>
                                 <hr>
                                 <form action="post.php" method="POST">

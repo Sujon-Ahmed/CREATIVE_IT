@@ -48,11 +48,21 @@ if(empty($name)) {
     $_SESSION['confirm_password_error'] = "Confirm Password Doesn't Match";
     header('location:register.php');
 } else {
-    // insert data 
-    $insert_data = "INSERT INTO `users`(`name`,`email`,`password`,`created_at`)VALUES('$name','$email','$after_hash','$created')"; 
-    $result = mysqli_query($con,$insert_data);
-    $_SESSION['insert_success'] = "Registration Success!";
-    header('location:register.php');
+    // check email exist
+    $select_email = "SELECT COUNT(*) as email_exist FROM `users` WHERE email='$email'";
+    $result = mysqli_query($con,$select_email);
+    $after_assoc = mysqli_fetch_assoc($result);
+    // check condition
+    if($after_assoc['email_exist'] == 1) {
+       $_SESSION['email_exist'] = "This Email Already Exist!";
+       header('location:register.php');
+    } else {
+        // insert data 
+        $insert_data = "INSERT INTO `users`(`name`,`email`,`password`,`created_at`)VALUES('$name','$email','$after_hash','$created')"; 
+        $result = mysqli_query($con,$insert_data);
+        $_SESSION['insert_success'] = "Registration Success!";
+        header('location:register.php');
+    }    
 }
 ?>  
 <?php require_once 'include/footer.php'; ?>
