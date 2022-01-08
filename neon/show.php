@@ -47,6 +47,7 @@ $users = mysqli_query($con,$select_users);
                                         <td><?= $user['email'] ?></td>
                                         <td><?= $user['created_at'] ?></td>
                                         <td>
+                                            <a href="edit_user.php?id=<?= $user['id'] ?>" class="btn btn-success btn-sm">Edit</a>
                                             <a onclick="javascript:return confirm('Are You Sure?')" href="delete.php?id=<?= $user['id'] ?>" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
