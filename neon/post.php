@@ -22,6 +22,10 @@ $after_hash = password_hash($password, PASSWORD_BCRYPT);
 date_default_timezone_set('Asia/Dhaka');
 $created = date('y-m-d h:i:s');
 
+// old data 
+$_SESSION['name'] = $name;
+$_SESSION['email'] = $email;
+
 // condition with validating all field
 if(empty($name)) {
     $_SESSION['name_error'] = "Enter Your Name";

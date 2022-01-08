@@ -16,28 +16,30 @@ require_once 'include/header.php';
                                 <div class="d-flex justify-content-between">
                                     <h5 class="title">Register </h5>
                                     <!-- show insert data success message -->
-                                    <span>
-                                        <?php if(isset($_SESSION['insert_success'])) {
-                                            ?>
-                                                <span style="color: green;font-weight:bold;"><?php echo $_SESSION['insert_success']; ?></span>
-                                            <?php
-                                        }unset($_SESSION['insert_success']); ?>
-                                    </span>
-                                    <!-- show email exist warning message -->
-                                    <span>
-                                        <?php if(isset($_SESSION['email_exist'])) {
-                                            ?>
-                                                <span style="color: red;font-weight:bold;"><?php echo $_SESSION['email_exist']; ?></span>
-                                            <?php
-                                        }unset($_SESSION['email_exist']); ?>
-                                    </span>
+                                   <div>
+                                        <span>
+                                            <?php if(isset($_SESSION['insert_success'])) {
+                                                ?>
+                                                    <span style="color: green;font-weight:bold;"><?php echo $_SESSION['insert_success']; ?></span>
+                                                <?php
+                                            }unset($_SESSION['insert_success']); ?>
+                                        </span>
+                                        <!-- show email exist warning message -->
+                                        <span>
+                                            <?php if(isset($_SESSION['email_exist'])) {
+                                                ?>
+                                                    <span style="color: red;font-weight:bold;"><?php echo $_SESSION['email_exist']; ?></span>
+                                                <?php
+                                            }unset($_SESSION['email_exist']); ?>
+                                        </span>
+                                   </div>
                                 </div>
                                 <hr>
                                 <form action="post.php" method="POST">
                                     <!-- name input felid -->
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                        <input type="text" name="name" class="form-control" placeholder="Username">
+                                        <input type="text" name="name" value="<?= (isset($_SESSION['name'])) ? ($_SESSION['name']) : '' ?>" class="form-control" placeholder="Username">
                                     </div>
                                     <!-- name error message -->
                                     <?php 
@@ -50,7 +52,7 @@ require_once 'include/header.php';
                                     <!-- email input felid -->
                                     <div class="input-group mt-3">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                                        <input type="text" name="email" class="form-control" placeholder="Email">
+                                        <input type="text" name="email" value="<?= (isset($_SESSION['email'])) ? ($_SESSION['email']) : '' ?>" class="form-control" placeholder="Email">
                                     </div>
                                     <!-- email error message -->
                                     <?php 
