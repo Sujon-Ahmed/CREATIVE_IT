@@ -26,19 +26,43 @@ require_once 'include/header.php';
                                     <!-- name input felid -->
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                        <input type="text" name="name" value="<?= $after_assoc['name'] ?>" class="form-control" placeholder="Username">
+                                        <input type="text" name="name" value="<?= (isset($_SESSION['name_error'])) ? '' : $after_assoc['name'] ?>" class="form-control" placeholder="Username">
                                     </div>
+                                    <!-- name error message -->
+                                    <?php 
+                                        if(isset($_SESSION['name_error'])) {
+                                            ?>
+                                                <span style="color:tomato"><?= $_SESSION['name_error'] ?></span>
+                                            <?php
+                                        }unset($_SESSION['name_error']);
+                                    ?>
                                     <!-- email input felid -->
                                     <div class="input-group mt-3">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                                        <input type="email" name="email" value="<?= $after_assoc['email'] ?>" class="form-control" placeholder="Email">
+                                        <input type="email" name="email" value="<?= (isset($_SESSION['email_error'])) ? '' : $after_assoc['email'] ?>" class="form-control" placeholder="Email">
                                     </div>
+                                    <!-- name error message -->
+                                    <?php 
+                                        if(isset($_SESSION['email_error'])) {
+                                            ?>
+                                                <span style="color:tomato"><?= $_SESSION['email_error'] ?></span>
+                                            <?php
+                                        }unset($_SESSION['email_error']);
+                                    ?>
                                     <!-- password input felid -->
                                     <div class="input-group mt-3 position-relative">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
                                         <input type="password" name="password" id="pass" class="form-control" placeholder="Password">
                                         <i class="fa fa-eye position-absolute" id="click"></i>
                                     </div>
+                                    <!-- password error message -->
+                                    <?php 
+                                        if(isset($_SESSION['password_error'])) {
+                                            ?>
+                                                <span style="color:tomato;"><?= $_SESSION['password_error'] ?></span>
+                                            <?php
+                                        }unset($_SESSION['password_error']);
+                                    ?>
                                     <!-- button -->
                                     <div class="input-group mt-3">
                                         <input type="hidden" class="button" value="<?= $after_assoc['id'] ?>" name="id" >
