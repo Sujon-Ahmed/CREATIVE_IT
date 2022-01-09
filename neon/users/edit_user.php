@@ -1,13 +1,16 @@
 <?php
 session_start();
-require 'db.php';
+if(!isset($_SESSION['welcome'])) {
+    header('location:/Creative-IT/neon/login/login.php');
+}
+require '../db.php';
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
     $select_users = "SELECT * FROM users WHERE id=$id";
     $select_users_result = mysqli_query($con,$select_users);
     $after_assoc = mysqli_fetch_assoc($select_users_result);
 }
-require_once 'include/header.php';
+require '../include/header.php';
 ?>
 <section>
     <div class="container">
@@ -16,7 +19,7 @@ require_once 'include/header.php';
                 <div class="card mb-3 shadow">
                     <div class="row g-0">
                         <div class="col-md-4 col-sm-12">
-                        <img src="img/bg.jpg" class="img-fluid rounded-start images" alt="...">
+                        <img src="../img/bg.jpg" class="img-fluid rounded-start images" style="width: 600px;height:300px" alt="...">
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="card-body">
@@ -53,7 +56,7 @@ require_once 'include/header.php';
                                     <div class="input-group mt-3 position-relative">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
                                         <input type="password" name="password" id="pass" class="form-control" placeholder="Password">
-                                        <i class="fa fa-eye position-absolute" id="click"></i>
+                                        <!-- <i class="fa fa-eye position-absolute" id="click"></i> -->
                                     </div>
                                     <!-- password error message -->
                                     <?php 
@@ -66,7 +69,7 @@ require_once 'include/header.php';
                                     <!-- button -->
                                     <div class="input-group mt-3">
                                         <input type="hidden" class="button" value="<?= $after_assoc['id'] ?>" name="id" >
-                                        <input type="submit" class="button" value="Login" name="submit" >
+                                        <input type="submit" class="btn btn-success" value="Login" name="submit" >
                                     </div>
                                 </form>
                             </div>
@@ -77,4 +80,4 @@ require_once 'include/header.php';
         </div>
     </div>
 </section>
-<?php require_once 'include/footer.php' ?>
+<?php require '../include/footer.php' ?>

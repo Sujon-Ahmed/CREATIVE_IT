@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php';
+require '../db.php';
 // check url get data
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
