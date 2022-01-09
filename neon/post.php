@@ -1,8 +1,7 @@
 <?php
 session_start();
 require 'db.php';
-// include header.php file form include/header.php
-require_once 'include/header.php';
+
 // get all input data form index form 
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -64,9 +63,10 @@ if(empty($name)) {
         // insert data 
         $insert_data = "INSERT INTO `users`(`name`,`email`,`password`,`created_at`)VALUES('$name','$email','$after_hash','$created')"; 
         $result = mysqli_query($con,$insert_data);
-        $_SESSION['insert_success'] = "Registration Success!";
+        $_SESSION['user_success'] = "Registration Success!";
+        unset($_SESSION['name']);
+        unset($_SESSION['email']);
         header('location:register.php');
     }    
 }
 ?>  
-<?php require_once 'include/footer.php'; ?>

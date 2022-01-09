@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'include/header.php';
+require 'include/header.php';
 ?>
 <section>
     <div class="container">
@@ -17,13 +17,7 @@ require_once 'include/header.php';
                                     <h5 class="title">Register </h5>
                                     <!-- show insert data success message -->
                                    <div>
-                                        <span>
-                                            <?php if(isset($_SESSION['insert_success'])) {
-                                                ?>
-                                                    <span style="color: green;font-weight:bold;"><?php echo $_SESSION['insert_success']; ?></span>
-                                                <?php
-                                            }unset($_SESSION['insert_success']); ?>
-                                        </span>
+                                       
                                         <!-- show email exist warning message -->
                                         <span>
                                             <?php if(isset($_SESSION['email_exist'])) {
@@ -39,7 +33,7 @@ require_once 'include/header.php';
                                     <!-- name input felid -->
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                        <input type="text" name="name" value="<?= (isset($_SESSION['name'])) ? ($_SESSION['name']) : '' ?>" class="form-control" placeholder="Username">
+                                        <input type="text" name="name" value="<?= (isset($_SESSION['name']) ? ($_SESSION['name']) : '');unset($_SESSION['name']) ?>" class="form-control" placeholder="Username">
                                     </div>
                                     <!-- name error message -->
                                     <?php 
@@ -52,7 +46,7 @@ require_once 'include/header.php';
                                     <!-- email input felid -->
                                     <div class="input-group mt-3">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                                        <input type="text" name="email" value="<?= (isset($_SESSION['email'])) ? ($_SESSION['email']) : '' ?>" class="form-control" placeholder="Email">
+                                        <input type="text" name="email" value="<?= (isset($_SESSION['email']) ? ($_SESSION['email']) : '');unset($_SESSION['email']) ?>" class="form-control" placeholder="Email">
                                     </div>
                                     <!-- email error message -->
                                     <?php 
@@ -101,4 +95,4 @@ require_once 'include/header.php';
         </div>
     </div>
 </section>
-<?php require_once 'include/footer.php' ?>
+<?php require 'include/footer.php' ?>
