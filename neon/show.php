@@ -11,7 +11,7 @@ $users = mysqli_query($con,$select_users);
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Show</title>
     <!-- custom css link -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <!-- fontawesome cdn link -->
@@ -48,7 +48,7 @@ $users = mysqli_query($con,$select_users);
                                         <td><?= $user['created_at'] ?></td>
                                         <td>
                                             <a href="edit_user.php?id=<?= $user['id'] ?>" class="btn btn-success btn-sm">Edit</a>
-                                            <a href="delete.php?id=<?= $user['id'] ?>" class="btn btn-danger btn-sm">Delete</a>
+                                            <a name="delete.php?id=<?= $user['id']?>" class="btn btn-danger btn-sm delete">Delete</a>
                                         </td>
                                     </tr>
                                 <?php
@@ -67,5 +67,35 @@ $users = mysqli_query($con,$select_users);
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- sweet alert cdn link -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- script for delete button -->
+    <script>
+        $('.delete').click(function() {
+            Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                var link = $(this).attr('name');
+                window.location.href = link;
+            }
+            })
+        })
+    </script>
+    <?php if(isset($_SESSION['delete_success'])){ ?>
+        <script>
+            Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+            )
+        </script>
+    <?php } unset($_SESSION['delete_success']) ?>
   </body>
 </html>
