@@ -343,7 +343,13 @@ In PHP, there are three types of arrays:
 Problem Solving With Backup Class
 
 ## Class-05     [04-01-2022]
+Include, require file compare with form validation
 
+## Class-06     [06-01-2022]
+Insert, Show, Delete data with Database
+
+## Class-07     [08-01-2022]
+Edit, Update data with show message sweet alert.
 
 
 
