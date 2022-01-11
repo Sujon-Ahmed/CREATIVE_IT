@@ -12,8 +12,6 @@ $pattern = '/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{8,20}$/';
 /* Here we are trying to validate the name field! */
 $name_number = preg_match($pattern,$name);
 /* Here we are trying to validate the password field */
-$pass_upper = preg_match($pattern,$password);
-$pass_lower = preg_match($pattern,$password);
 $pass_special = preg_match($pattern,$password);
 // password hash
 $after_hash = password_hash($password, PASSWORD_BCRYPT);
@@ -41,7 +39,7 @@ if(empty($name)) {
 } elseif(empty($password)) {
     $_SESSION['password_error'] = "Enter Your Password";
     header('location:register.php');
-} elseif(!$pass_upper || !$pass_lower || !$pass_special || strlen($password) < 8) {
+} elseif(!$pass_special) {
     $_SESSION['password_error'] = "Password must contain at least one number, uppercase, lowercase letter, and at least 8 character or more";
     header('location:register.php');
 } elseif(empty($confirm_password)) {
