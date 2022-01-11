@@ -29,7 +29,7 @@ require 'include/header.php';
                                    </div>
                                 </div>
                                 <hr>
-                                <form action="post.php" method="POST">
+                                <form action="post.php" method="POST" enctype="multipart/form-data">
                                     <!-- name input felid -->
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
@@ -83,6 +83,11 @@ require 'include/header.php';
                                             <?php
                                         }unset($_SESSION['confirm_password_error']);
                                     ?>
+                                    <!-- image input felid -->
+                                    <div class="input-group mt-3">
+                                        <input type="file" name="profile_image" class="form-control">
+                                    </div>
+                                    <!-- submit -->
                                     <div class="input-group mt-3">
                                         <input type="submit" class="button" value="Login" name="submit" >
                                     </div>

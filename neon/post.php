@@ -60,13 +60,41 @@ if(empty($name)) {
        $_SESSION['email_exist'] = "This Email Already Exist!";
        header('location:register.php');
     } else {
-        // insert data 
-        $insert_data = "INSERT INTO `users`(`name`,`email`,`password`,`created_at`)VALUES('$name','$email','$after_hash','$created')"; 
-        $result = mysqli_query($con,$insert_data);
-        $_SESSION['user_success'] = "Registration Success!";
-        unset($_SESSION['name']);
-        unset($_SESSION['email']);
-        header('location:register.php');
+        // image uploads
+        $uploaded_file = $_FILES['profile_image'];
+        $after_explode = explode('.',$uploaded_file['name']);
+        $extension = end($after_explode);
+        $allowed_extension = array('jpg','png','jpeg');
+        // check in array function
+        if(in_array($extension, $allowed_extension)) {
+            // check image size
+            if($uploaded_file['size'] <= 2000000) {
+                // insert data without image for get id
+                $insert_data = "INSERT INTO `users`(`name`,`email`,`password`,`created_at`)VALUES('$name','$email','$after_hash','$created')"; 
+                $result = mysqli_query($con,$insert_data);
+                // get id with mysqli_insert_id()
+                $last_id = mysqli_insert_id($con);
+                $file_name = $last_id.'.'.$extension;
+                $new_location = 'uploads/users/'.$file_name;
+                move_uploaded_file($uploaded_file['tmp_name'],$new_location);
+                // update image file
+                $update = "UPDATE users SET `profile_image`='$file_name' WHERE id = '$last_id'";
+                $update_result = mysqli_query($con, $update);
+                // session start
+                $_SESSION['user_success'] = "Registration Success!";
+                // unset session data
+                unset($_SESSION['name']);
+                unset($_SESSION['email']);
+                header('location:register.php');
+            } else {
+                $_SESSION['size_error'] = 'The file is too large. Allowed maximum size is 2 MiB.';
+                header('location:register.php');
+            }
+        } else {
+            $_SESSION['extension_error'] = 'Invalid Extension!';
+            header('location:register.php');
+        }
+        
     }    
 }
 ?>  

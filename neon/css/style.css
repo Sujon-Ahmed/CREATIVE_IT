@@ -19,8 +19,8 @@ section {
 .card {
     width: 60vw;
 }
-.col-md-4 img{
-    height: 380px;
+.col-md-4 img {
+    height: 405px;
 }
 .card .title {
     color: tomato;

@@ -20,6 +20,7 @@
             }
         });
    </script>
+   <!-- sweet alert for registration success message -->
    <?php if(isset($_SESSION['user_success'])) { ?>
     <script>
         Swal.fire({
@@ -31,5 +32,29 @@
         })
     </script>
     <?php } unset($_SESSION['user_success'])?>
+   <!-- sweet alert for invalid extension error message -->
+   <?php if(isset($_SESSION['extension_error'])) { ?>
+    <script>
+        Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        title: '<?= $_SESSION['extension_error'] ?>',
+        showConfirmButton: false,
+        timer: 1500
+        })
+    </script>
+    <?php } unset($_SESSION['extension_error'])?>
+   <!-- sweet alert for file size error message -->
+   <?php if(isset($_SESSION['size_error'])) { ?>
+    <script>
+        Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        title: '<?= $_SESSION['size_error'] ?>',
+        showConfirmButton: false,
+        timer: 2000
+        })
+    </script>
+    <?php } unset($_SESSION['size_error'])?>
   </body>
 </html>
