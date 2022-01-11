@@ -36,6 +36,7 @@ $users = mysqli_query($con,$select_users);
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Image</th>
                             <th>Create_at</th>
                             <th>Action</th>
                         </tr>
@@ -48,6 +49,9 @@ $users = mysqli_query($con,$select_users);
                                         <td><?= $user['id'] ?></td>
                                         <td><?= $user['name'] ?></td>
                                         <td><?= $user['email'] ?></td>
+                                        <td>
+                                            <img width="75" src="../uploads/users/<?= $user['profile_image'] ?>" alt="">
+                                        </td>
                                         <td><?= $user['created_at'] ?></td>
                                         <td>
                                             <a href="edit_user.php?id=<?= $user['id'] ?>" class="btn btn-success btn-sm">Edit</a>
