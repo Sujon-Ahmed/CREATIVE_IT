@@ -15,17 +15,17 @@ require '../include/header.php';
 <section>
     <div class="container">
         <div class="row m-auto">
-            <div class="col-lg-6 m-auto mt-5">
+            <div class="col-lg-8 m-auto mt-5">
                 <div class="card mb-3 shadow">
                     <div class="row g-0">
                         <div class="col-md-4 col-sm-12">
-                        <img src="../img/bg.jpg" class="img-fluid rounded-start images" style="width: 600px;height:300px" alt="...">
+                        <img src="../img/bg.jpg" class="img-fluid rounded-start images" style="width: 600px;height:400px" alt="...">
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="card-body">
                                 <h5 class="title">Update User </h5>
                                 <hr>
-                                <form action="update.php" method="POST">
+                                <form action="update.php" method="POST" enctype="multipart/form-data">
                                     <!-- name input felid -->
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
@@ -66,10 +66,14 @@ require '../include/header.php';
                                             <?php
                                         }unset($_SESSION['password_error']);
                                     ?>
+                                    <!-- image input felid -->
+                                    <div class="input-group mt-3">
+                                        <input type="file" name="profile_image" class="form-control">
+                                    </div>
                                     <!-- button -->
                                     <div class="input-group mt-3">
                                         <input type="hidden" class="button" value="<?= $after_assoc['id'] ?>" name="id" >
-                                        <input type="submit" class="btn btn-success" value="Login" name="submit" >
+                                        <input type="submit" class="btn btn-success" value="Update" name="submit" >
                                     </div>
                                 </form>
                             </div>
