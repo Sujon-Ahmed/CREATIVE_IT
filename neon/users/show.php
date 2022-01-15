@@ -12,9 +12,9 @@ $users = mysqli_query($con,$select_users);
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="sl-mainpanel">
 <nav class="breadcrumb sl-breadcrumb">
-<a class="breadcrumb-item" href="index.html">Starlight</a>
-<a class="breadcrumb-item" href="index.html">Pages</a>
-<span class="breadcrumb-item active">Blank Page</span>
+<a class="breadcrumb-item" href="index.html">Neon</a>
+<a class="breadcrumb-item" href="index.html">Users</a>
+<span class="breadcrumb-item active">View</span>
 </nav>
 
 <div class="sl-pagebody">

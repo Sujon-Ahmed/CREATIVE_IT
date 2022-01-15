@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php';
+require '../db.php';
 
 // get all input data form index form 
 $name = $_POST['name'];
@@ -73,7 +73,7 @@ if(empty($name)) {
                 // get id with mysqli_insert_id()
                 $last_id = mysqli_insert_id($con);
                 $file_name = $last_id.'.'.$extension;
-                $new_location = 'uploads/users/'.$file_name;
+                $new_location = '../uploads/users/'.$file_name;
                 move_uploaded_file($uploaded_file['tmp_name'],$new_location);
                 // update image file
                 $update = "UPDATE users SET `profile_image`='$file_name' WHERE id = '$last_id'";
