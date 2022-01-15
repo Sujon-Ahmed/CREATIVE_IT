@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION['welcome'])) {
+    header('location:/Creative-IT/neon/login/login.php');
+}
 require '../include/header.php';
 ?>
 <?php require '../dashboard_includes/header.php'; ?>
@@ -41,7 +44,7 @@ require '../include/header.php';
                             <!-- name input felid -->
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                <input type="text" name="name" value="<?= (isset($_SESSION['name']) ? ($_SESSION['name']) : '');unset($_SESSION['name']) ?>" class="form-control" placeholder="Username">
+                                <input type="text" name="name" class="form-control" placeholder="Username">
                             </div>
                             <!-- name error message -->
                             <?php 
@@ -54,7 +57,7 @@ require '../include/header.php';
                             <!-- email input felid -->
                             <div class="input-group mt-3">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                                <input type="text" name="email" value="<?= (isset($_SESSION['email']) ? ($_SESSION['email']) : '');unset($_SESSION['email']) ?>" class="form-control" placeholder="Email">
+                                <input type="text" name="email" class="form-control" placeholder="Email">
                             </div>
                             <!-- email error message -->
                             <?php 

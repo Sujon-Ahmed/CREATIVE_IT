@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require '../neon/dashboard_includes/header.php';
 ?>
 <!-- ########## START: MAIN PANEL ########## -->

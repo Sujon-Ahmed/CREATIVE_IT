@@ -20,8 +20,8 @@ date_default_timezone_set('Asia/Dhaka');
 $created = date('y-m-d h:i:s');
 
 // old data 
-$_SESSION['name'] = $name;
-$_SESSION['email'] = $email;
+// $_SESSION['name'] = $name;
+// $_SESSION['email'] = $email;
 
 // condition with validating all field
 if(empty($name)) {
@@ -81,8 +81,8 @@ if(empty($name)) {
                 // session start
                 $_SESSION['user_success'] = "Registration Success!";
                 // unset session data
-                unset($_SESSION['name']);
-                unset($_SESSION['email']);
+                // unset($_SESSION['name']);
+                // unset($_SESSION['email']);
                 header('location:register.php');
             } else {
                 $_SESSION['size_error'] = 'The file is too large. Allowed maximum size is 2 MiB.';
