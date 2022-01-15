@@ -1,6 +1,5 @@
 <?php 
 require '../neon/dashboard_includes/header.php';
-
 ?>
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="sl-mainpanel">
@@ -12,7 +11,7 @@ require '../neon/dashboard_includes/header.php';
 
 <div class="sl-pagebody">
 <div class="sl-page-title">
-    <h5>Blank Page</h5>
+    <h5>Welcome to Neon Dashboard</h5>
     <p>This is a starter page</p>
 </div><!-- sl-page-title -->
 
@@ -23,5 +22,4 @@ require '../neon/dashboard_includes/header.php';
 
 <?php 
 require '../neon/dashboard_includes/footer.php';
-
 ?>
