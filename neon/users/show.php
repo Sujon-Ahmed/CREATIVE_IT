@@ -41,7 +41,7 @@ $users = mysqli_query($con,$select_users);
                                 <td><?= $user['name'] ?></td>
                                 <td><?= $user['email'] ?></td>
                                 <td>
-                                    <img width="75" src="../uploads/users/<?= $user['profile_image'] ?>" alt="">
+                                    <img width="60" src="../uploads/users/<?= $user['profile_image'] ?>" alt="">
                                 </td>
                                 <td><?= $user['created_at'] ?></td>
                                 <td>

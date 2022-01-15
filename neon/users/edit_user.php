@@ -10,11 +10,20 @@ if(isset($_GET['id'])) {
     $select_users_result = mysqli_query($con,$select_users);
     $after_assoc = mysqli_fetch_assoc($select_users_result);
 }
+
+require '../dashboard_includes/header.php';
 require '../include/header.php';
 ?>
-<section>
-    <div class="container">
-        <div class="row m-auto">
+<!-- ########## START: MAIN PANEL ########## -->
+<div class="sl-mainpanel">
+<nav class="breadcrumb sl-breadcrumb">
+<a class="breadcrumb-item" href="index.html">Starlight</a>
+<a class="breadcrumb-item" href="index.html">Pages</a>
+<span class="breadcrumb-item active">Blank Page</span>
+</nav>
+
+<div class="sl-pagebody">
+ <div class="row m-auto">
             <div class="col-lg-8 m-auto mt-5">
                 <div class="card mb-3 shadow">
                     <div class="row g-0">
@@ -82,6 +91,13 @@ require '../include/header.php';
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<?php require '../include/footer.php' ?>
+
+</div><!-- sl-pagebody -->
+</div><!-- sl-mainpanel -->
+<!-- ########## END: MAIN PANEL ########## -->
+       
+   
+<?php 
+require '../include/footer.php';
+require '../dashboard_includes/header.php';
+?>

@@ -6,5 +6,6 @@
     <script src="/Creative-IT/neon/dashboard_assets/lib/datatables/jquery.dataTables.js"></script>
 
     <script src="/Creative-IT/neon/dashboard_assets/js/starlight.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
