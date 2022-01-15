@@ -46,7 +46,7 @@
   <body>
 
     <!-- ########## START: LEFT PANEL ########## -->
-    <div class="sl-logo"><a href=""><i class="icon ion-android-star-outline"></i> Neon</a></div>
+    <div class="sl-logo"><a href="/Creative-IT/neon/admin.php"><i class="icon ion-android-star-outline"></i> Neon</a></div>
     <div class="sl-sideleft">
       <div class="input-group input-group-search">
         <input type="search" name="search" class="form-control" placeholder="Search">
@@ -78,7 +78,7 @@
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
           <li class="nav-item"><a href="chart-morris.html" class="nav-link">Add User</a></li>
-          <li class="nav-item"><a href="chart-flot.html" class="nav-link">View Users</a></li>
+          <li class="nav-item"><a href="/Creative-IT/neon/users/show.php" class="nav-link">View Users</a></li>
         </ul>
       </div><!-- sl-sideleft-menu -->
 
