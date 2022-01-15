@@ -1,8 +1,8 @@
 <?php
 session_start();
-// if(!isset($_SESSION['welcome'])) {
-//     header('location:/Creative-IT/neon/login/login.php');
-// }
+if(!isset($_SESSION['welcome'])) {
+    header('location:/Creative-IT/neon/login/login.php');
+}
 require '../db.php';
 $select_users = "SELECT * FROM `users`";
 // query
