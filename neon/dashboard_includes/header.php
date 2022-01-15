@@ -35,7 +35,9 @@
     <link href="/Creative-IT/neon/dashboard_assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="/Creative-IT/neon/dashboard_assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
     <link href="/Creative-IT/neon/dashboard_assets/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
-
+    <!-- dataTable -->
+    <link href="/Creative-IT/neon/dashboard_assets/lib/datatables/jquery.dataTables.css" rel="stylesheet">
+  
 
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="/Creative-IT/neon/dashboard_assets/css/starlight.css">

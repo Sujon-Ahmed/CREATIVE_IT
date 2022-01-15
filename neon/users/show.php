@@ -1,121 +1,104 @@
 <?php
 session_start();
-if(!isset($_SESSION['welcome'])) {
-    header('location:/Creative-IT/neon/login/login.php');
-}
+// if(!isset($_SESSION['welcome'])) {
+//     header('location:/Creative-IT/neon/login/login.php');
+// }
 require '../db.php';
 $select_users = "SELECT * FROM `users`";
 // query
 $users = mysqli_query($con,$select_users);
 ?>
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Show</title>
-    <!-- custom css link -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-          <!-- dataTable CSS cdn link -->
-    <link rel="stylesheet" href="../plugin/dataTables.bootstrap4.min.css">
-    <!-- fontawesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  </head>
-<body>
-<!-- show all users -->
-<section class="mt-3">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <table class="table table-striped table-hover caption-top" id="example">
-                    <caption style="font-size: 20px;">List of users <a onclick="javascript:return confirm('Are you sure logout!')" href="../login/logout.php" class="btn btn-danger btn-sm float-end">Logout</a></caption>
-                    <thead class="bg-dark text-light">
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Image</th>
-                            <th>Create_at</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php 
-                            foreach($users as $user) {
-                                ?>
-                                    <tr>
-                                        <td><?= $user['id'] ?></td>
-                                        <td><?= $user['name'] ?></td>
-                                        <td><?= $user['email'] ?></td>
-                                        <td>
-                                            <img width="75" src="../uploads/users/<?= $user['profile_image'] ?>" alt="">
-                                        </td>
-                                        <td><?= $user['created_at'] ?></td>
-                                        <td>
-                                            <a href="edit_user.php?id=<?= $user['id'] ?>" class="btn btn-success btn-sm">Edit</a>
-                                            <a name="delete.php?id=<?= $user['id']?>" class="btn btn-danger btn-sm delete">Delete</a>
-                                        </td>
-                                    </tr>
-                                <?php
-                            }
-                        ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- jquery cdn link -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <!-- sweet alert cdn link -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- dataTable JS cdn link -->
-    <script src="../plugin/jquery-3.4.1.min.js"></script>
-    <script src="../plugin/jquery.dataTables.min.js"></script>
-    <script src="../plugin/dataTables.bootstrap4.min.js"></script>
+<?php require '../dashboard_includes/header.php'; ?>
+<!-- ########## START: MAIN PANEL ########## -->
+<div class="sl-mainpanel">
+<nav class="breadcrumb sl-breadcrumb">
+<a class="breadcrumb-item" href="index.html">Starlight</a>
+<a class="breadcrumb-item" href="index.html">Pages</a>
+<span class="breadcrumb-item active">Blank Page</span>
+</nav>
 
-    <!-- script for dataTable -->
-    <script>
-        $(document).ready(function(){
-            $('#example').DataTable();
-        });
-    </script>
-    <!-- script for delete button -->
-    <script>
-        $('.delete').click(function() {
-            Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-            if (result.isConfirmed) {
-                var link = $(this).attr('name');
-                window.location.href = link;
-            }
-            })
-        })
-    </script>
-    <?php if(isset($_SESSION['delete_success'])){ ?>
-        <script>
-            Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
-            'success'
-            )
-        </script>
-    <?php } unset($_SESSION['delete_success']) ?>
-  </body>
-</html>
+<div class="sl-pagebody">
+<div class="container">
+<div class="row">
+    <div class="col">
+        <table class="table table-striped table-hover caption-top" id="datatable1">
+            <thead class="bg-dark text-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Image</th>
+                    <th>Create_at</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                    foreach($users as $user) {
+                        ?>
+                            <tr>
+                                <td><?= $user['id'] ?></td>
+                                <td><?= $user['name'] ?></td>
+                                <td><?= $user['email'] ?></td>
+                                <td>
+                                    <img width="75" src="../uploads/users/<?= $user['profile_image'] ?>" alt="">
+                                </td>
+                                <td><?= $user['created_at'] ?></td>
+                                <td>
+                                    <a href="edit_user.php?id=<?= $user['id'] ?>" class="btn btn-success btn-sm">Edit</a>
+                                    <a name="delete.php?id=<?= $user['id']?>" class="btn btn-danger btn-sm delete text-light">Delete</a>
+                                </td>
+                            </tr>
+                        <?php
+                    }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</div><!-- sl-pagebody -->
+</div><!-- sl-mainpanel -->
+<!-- ########## END: MAIN PANEL ########## -->
+<?php require '../dashboard_includes/footer.php'; ?>
+
+<!-- script for dataTable -->
+<script>
+$('#datatable1').DataTable({
+responsive: true,
+language: {
+  searchPlaceholder: 'Search...',
+  sSearch: '',
+  lengthMenu: '_MENU_ items/page',
+}
+});
+</script>
+<!-- script for delete button -->
+<script>
+$('.delete').click(function() {
+    Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+    if (result.isConfirmed) {
+        var link = $(this).attr('name');
+        window.location.href = link;
+    }
+    })
+})
+</script>
+<?php if(isset($_SESSION['delete_success'])){ ?>
+<script>
+    Swal.fire(
+    'Deleted!',
+    'Your file has been deleted.',
+    'success'
+    )
+</script>
+<?php } unset($_SESSION['delete_success']) ?>
+ 
