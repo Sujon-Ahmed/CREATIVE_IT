@@ -14,6 +14,6 @@ if(isset($_GET['id'])) {
     $delete = "DELETE FROM `users` WHERE id = $id";
     $result = mysqli_query($con,$delete);
     $_SESSION['delete_success'] = "Delete Success";
-    header('location:show.php');
+    header('location:trashed_user.php');
 }
 ?>

@@ -4,7 +4,7 @@ if(!isset($_SESSION['welcome'])) {
     header('location:/Creative-IT/neon/login/login.php');
 }
 require '../db.php';
-$select_users = "SELECT * FROM `users` WHERE status=0 ORDER BY id DESC";
+$select_users = "SELECT * FROM `users` WHERE status=1 ORDER BY id DESC";
 // query
 $users = mysqli_query($con,$select_users);
 ?>
@@ -13,8 +13,8 @@ $users = mysqli_query($con,$select_users);
 <div class="sl-mainpanel">
 <nav class="breadcrumb sl-breadcrumb">
 <a class="breadcrumb-item" href="index.html">Neon</a>
-<a class="breadcrumb-item" href="index.html">Users</a>
-<span class="breadcrumb-item active">View</span>
+<a class="breadcrumb-item" href="index.html">Trash</a>
+<span class="breadcrumb-item active">Users</span>
 </nav>
 
 <div class="sl-pagebody">
@@ -45,8 +45,8 @@ $users = mysqli_query($con,$select_users);
                                 </td>
                                 <td><?= $user['created_at'] ?></td>
                                 <td>
-                                    <a href="edit_user.php?id=<?= $user['id'] ?>" class="btn btn-success btn-sm">Edit</a>
-                                    <a name="user_status_change.php?id=<?= $user['id']?>" class="btn btn-danger btn-sm delete text-light">Delete</a>
+                                    <a href="user_status_change.php?id=<?= $user['id'] ?>" class="btn btn-success btn-sm">Restore</a>
+                                    <a name="delete.php?id=<?= $user['id']?>" class="btn btn-danger btn-sm delete text-light">Delete</a>
                                 </td>
                             </tr>
                         <?php

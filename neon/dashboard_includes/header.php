@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -81,6 +79,16 @@ session_start();
         <ul class="sl-menu-sub nav flex-column">
           <li class="nav-item"><a href="/Creative-IT/neon/register/register.php" class="nav-link">Add User</a></li>
           <li class="nav-item"><a href="/Creative-IT/neon/users/show.php" class="nav-link">View Users</a></li>
+        </ul>
+        <a href="#" class="sl-menu-link">
+          <div class="sl-menu-item">
+            <i class="menu-item-icon ion-ios-trash-outline tx-20"></i>
+            <span class="menu-item-label">Trash</span>
+            <i class="menu-item-arrow fa fa-angle-down"></i>
+          </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
+        <ul class="sl-menu-sub nav flex-column">
+          <li class="nav-item"><a href="/Creative-IT/neon/users/trashed_user.php" class="nav-link">Users</a></li>
         </ul>
       </div><!-- sl-sideleft-menu -->
 
