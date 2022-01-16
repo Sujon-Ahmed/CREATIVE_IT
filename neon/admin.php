@@ -7,7 +7,7 @@ require '../neon/dashboard_includes/header.php';
 <nav class="breadcrumb sl-breadcrumb">
 <a class="breadcrumb-item" href="index.html">Starlight</a>
 <a class="breadcrumb-item" href="index.html">Pages</a>
-<span class="breadcrumb-item active">Blank Page</span>
+<span class="breadcrumb-item active">Home</span>
 </nav>
 
 <div class="sl-pagebody">
