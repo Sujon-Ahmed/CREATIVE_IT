@@ -20,7 +20,4 @@ require '../neon/dashboard_includes/header.php';
 </div><!-- sl-mainpanel -->
 <!-- ########## END: MAIN PANEL ########## -->
 
-
-<?php 
-require '../neon/dashboard_includes/footer.php';
-?>
+<?php require '../neon/dashboard_includes/footer.php'; ?>

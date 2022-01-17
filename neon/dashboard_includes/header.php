@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Twitter -->
     <meta name="twitter:site" content="@themepixels">
     <meta name="twitter:creator" content="@themepixels">
@@ -12,38 +11,29 @@
     <meta name="twitter:title" content="Starlight">
     <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="twitter:image" content="http://themepixels.me/starlight/img/starlight-social.png">
-
     <!-- Facebook -->
     <meta property="og:url" content="http://themepixels.me/starlight">
     <meta property="og:title" content="Starlight">
     <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
-
     <meta property="og:image" content="http://themepixels.me/starlight/img/starlight-social.png">
     <meta property="og:image:secure_url" content="http://themepixels.me/starlight/img/starlight-social.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="600">
-
     <!-- Meta -->
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
-
     <title>Neon Dashboard</title>
-
     <!-- vendor css -->
     <link href="/Creative-IT/neon/dashboard_assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="/Creative-IT/neon/dashboard_assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
     <link href="/Creative-IT/neon/dashboard_assets/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <!-- dataTable -->
     <link href="/Creative-IT/neon/dashboard_assets/lib/datatables/jquery.dataTables.css" rel="stylesheet">
-  
-
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="/Creative-IT/neon/dashboard_assets/css/starlight.css">
   </head>
-
   <body>
-
     <!-- ########## START: LEFT PANEL ########## -->
     <div class="sl-logo"><a href="/Creative-IT/neon/admin.php"><i class="icon ion-android-star-outline"></i> Neon</a></div>
     <div class="sl-sideleft">
@@ -53,7 +43,6 @@
           <button class="btn"><i class="fa fa-search"></i></button>
         </span><!-- input-group-btn -->
       </div><!-- input-group -->
-
       <label class="sidebar-label">Navigation</label>
       <div class="sl-sideleft-menu">
         <a href="/Creative-IT/neon/admin.php" class="sl-menu-link">
@@ -106,15 +95,11 @@
           <div class="dropdown">
             <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
               <span class="logged-name"><?= $_SESSION['name'] ?></span>
-              <img src="/Creative-IT/neon/uploads/users/<?=  $_SESSION['profile_image'] ?>" class="wd-32 rounded-circle" alt="">
+              <img src="/Creative-IT/neon/uploads/users/<?= $_SESSION['profile_image'] ?>" class="wd-32 rounded-circle" alt="">
             </a>
             <div class="dropdown-menu dropdown-menu-header wd-200">
               <ul class="list-unstyled user-profile-nav">
-                <li><a href=""><i class="icon ion-ios-person-outline"></i> Edit Profile</a></li>
-                <li><a href=""><i class="icon ion-ios-gear-outline"></i> Settings</a></li>
-                <li><a href=""><i class="icon ion-ios-download-outline"></i> Downloads</a></li>
-                <li><a href=""><i class="icon ion-ios-star-outline"></i> Favorites</a></li>
-                <li><a href=""><i class="icon ion-ios-folder-outline"></i> Collections</a></li>
+                <li><a href="/Creative-IT/neon/users/profile.php"><i class="icon ion-ios-person-outline"></i> Edit Profile</a></li>
                 <li><a href="/Creative-IT/neon/login/logout.php"><i class="icon ion-power"></i> Sign Out</a></li>
               </ul>
             </div><!-- dropdown-menu -->
@@ -141,8 +126,8 @@
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" role="tab" href="#notifications">Notifications (8)</a>
         </li>
-      </ul><!-- sidebar-tabs -->
-
+      </ul>
+      <!-- sidebar-tabs -->
       <!-- Tab panes -->
       <div class="tab-content">
         <div class="tab-pane pos-absolute a-0 mg-t-60 active" id="messages" role="tabpanel">
@@ -204,8 +189,8 @@
           <div class="pd-15">
             <a href="" class="btn btn-secondary btn-block bd-0 rounded-0 tx-10 tx-uppercase tx-mont tx-medium tx-spacing-2">View More Messages</a>
           </div>
-        </div><!-- #messages -->
-
+        </div>
+        <!-- #messages -->
         <div class="tab-pane pos-absolute a-0 mg-t-60 overflow-y-auto" id="notifications" role="tabpanel">
           <div class="media-list">
             <!-- loop starts here -->
