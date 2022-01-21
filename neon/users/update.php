@@ -45,11 +45,11 @@ if(empty($name)) {
                 header('location:show.php');
             } else {
                 $_SESSION['size_error'] = "The file is too large. Allowed maximum size is 2 MiB.";
-                 header('location:edit_user.php');
+                 header('location:edit_user.php?id='.$id);
             }
         } else {
             $_SESSION['extension_error'] = "Invalid Extension!";
-            header('location:edit_user.php');
+            header('location:edit_user.php?id='.$id);
         }
     } else {
         // update without image, password felid
@@ -61,7 +61,7 @@ if(empty($name)) {
 } else {
     if (strlen($password) < 8) {
         $_SESSION['password_error'] = "At least 8 characters";
-        header('location:edit_user.php');
+        header('location:edit_user.php?id='.$id);
     } else {
         // update image with password felid
         if($_FILES['profile_image']['name'] != '') {
@@ -89,11 +89,11 @@ if(empty($name)) {
                     
                 } else {
                     $_SESSION['size_error'] = "The file is too large. Allowed maximum size is 2 MiB.";
-                header('location:edit_user.php');
+                header('location:edit_user.php?id='.$id);
                 }
             } else {
                 $_SESSION['extension_error'] = "Invalid Extension";
-                header('location:edit_user.php');
+                header('location:edit_user.php?id='.$id);
             }
         } else {
             $update_user = "UPDATE users SET name='$name', email='$email', password='$after_hash' WHERE id='$id'";

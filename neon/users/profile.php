@@ -33,7 +33,7 @@ require("../dashboard_includes/header.php");
                                 </div>
                                 <!-- submit button -->
                                 <div class="mt-3">
-                                    <button type="submit" class="btn btn-info btn-sm">Update</button>
+                                    <input type="submit" name="submit" class="btn btn-info btn-sm" value="Update">
                                 </div>
                             </form>
                         </div>
