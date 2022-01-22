@@ -14,8 +14,4 @@ if($after_assoc['status'] == 0) {
     $update_status_result = mysqli_query($con, $update_status);
     header('location:trashed_user.php');
 }
-
-
-
-
 ?>
