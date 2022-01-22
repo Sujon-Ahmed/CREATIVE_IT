@@ -1,11 +1,14 @@
 <?php
 session_start();
 require '../db.php';
-if (isset($_POST['submit'])) {
+if (!isset($_POST['submit'])) {
+    header('location:add_banner.php');
+} else {
     $sub_title = $_POST['sub_title'];
     $title = $_POST['title'];
     $description = $_POST['description'];
-    // image upload here
+    if ($sub_title != '' && $title != '' && $description != '') {
+         // image upload here
     if (!empty($_FILES['file']['name'])) {
         $file_name = $_FILES['file']['name'];
         $file_tmp = $_FILES['file']['tmp_name'];
@@ -44,8 +47,10 @@ if (isset($_POST['submit'])) {
         $_SESSION['empty_img'] = "Select an Image!";
         header('location:add_banner.php');
     }
-} else {
-    header('location:add_banner.php');
+    } else {
+        $_SESSION['required'] = "All felid are required!";
+        header('location:add_banner.php');
+    }
 }
 
 

@@ -17,7 +17,17 @@
       height: 150
       })
     </script>
-    <!-- success message -->
+    <!-- all felid required error message -->
+    <?php if (isset($_SESSION['required'])) {?>
+        <script>
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: '<?= $_SESSION['required'] ?>'
+            })
+        </script>
+    <?php } unset($_SESSION['required']) ?>
+    <!-- banner add success message -->
     <?php if (isset($_SESSION['upload_success'])) {?>
         <script>
             Swal.fire({
@@ -29,5 +39,36 @@
             })
         </script>
     <?php } unset($_SESSION['upload_success']) ?>
+    <!-- banner file size error message -->
+    <?php if (isset($_SESSION['large_file_error'])) {?>
+        <script>
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: '<?= $_SESSION['large_file_error'] ?>'
+            })
+        </script>
+    <?php } unset($_SESSION['large_file_error']) ?>
+    <!-- banner image file extension error message -->
+    <?php if (isset($_SESSION['ext_error'])) {?>
+        <script>
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: '<?= $_SESSION['ext_error'] ?>'
+            })
+        </script>
+    <?php } unset($_SESSION['ext_error']) ?>
+    <!-- banner image empty error message -->
+    <?php if (isset($_SESSION['empty_img'])) {?>
+        <script>
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: '<?= $_SESSION['empty_img'] ?>'
+            })
+        </script>
+    <?php } unset($_SESSION['empty_img']) ?>
+    
   </body>
 </html>
