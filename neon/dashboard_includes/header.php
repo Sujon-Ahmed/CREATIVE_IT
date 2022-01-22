@@ -82,7 +82,7 @@ if(!isset($_SESSION['welcome'])) {
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
           <li class="nav-item"><a href="/Creative-IT/neon/banners/add_banner.php" class="nav-link">Add Banner</a></li>
-          <li class="nav-item"><a href="/Creative-IT/neon/users/show.php" class="nav-link">View Banner</a></li>
+          <li class="nav-item"><a href="/Creative-IT/neon/banners/view_banner.php" class="nav-link">View Banner</a></li>
         </ul>
         <!-- trashed user navigation bar -->
         <a href="#" class="sl-menu-link">
