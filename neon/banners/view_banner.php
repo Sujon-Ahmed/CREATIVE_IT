@@ -54,7 +54,13 @@ $banners = mysqli_query($con,$select_banners);
                                                 ?>
                                             </td>
                                             <td><?= date('M-d-Y h:i A',strtotime($banner['banner_created_at'])) ?></td>
-                                            <td><?= $banner['banner_status'] ?></td>
+                                            <td>
+                                                <?php if ($banner['banner_status'] == 0) { ?>
+                                                    <a href="status_change.php?id=<?= $banner['id'] ?>" class="btn btn-secondary btn-sm">Deactive</a>
+                                                <?php } else { ?>
+                                                    <a href="status_change.php?id=<?= $banner['id'] ?>" class="btn btn-info btn-sm">Active</a>
+                                                <?php } ?>
+                                            </td>
                                             <td>
                                                 <!-- edit -->
                                                 <a href="edit_banner.php?id=<?= $banner['id'] ?>" class="btn btn-success btn-sm">Edit</a>
