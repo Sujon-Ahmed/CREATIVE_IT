@@ -4,7 +4,7 @@ if(!isset($_SESSION['welcome'])) {
     header('location:/Creative-IT/neon/login/login.php');
 }
 require '../db.php';
-$select_banners = "SELECT * FROM `banners` ORDER BY banner_id DESC";
+$select_banners = "SELECT * FROM `banners`";
 $banners = mysqli_query($con,$select_banners);
 ?>
 <?php require '../dashboard_includes/header.php'; ?>
@@ -28,6 +28,7 @@ $banners = mysqli_query($con,$select_banners);
                                 <th>Image</th>
                                 <th>Description</th>
                                 <th>Date</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>                                            
@@ -36,7 +37,7 @@ $banners = mysqli_query($con,$select_banners);
                                 foreach($banners as $banner) {
                                     ?>
                                         <tr>
-                                            <td><?= $banner['banner_id'] ?></td>
+                                            <td><?= $banner['id'] ?></td>
                                             <td><?= $banner['banner_sub_title'] ?></td>
                                             <td><?= $banner['banner_title'] ?></td>
                                             <td>
@@ -52,12 +53,13 @@ $banners = mysqli_query($con,$select_banners);
                                                     }
                                                 ?>
                                             </td>
-                                            <td><?= $banner['banner_created_at'] ?></td>
+                                            <td><?= date('M-d-Y h:i A',strtotime($banner['banner_created_at'])) ?></td>
+                                            <td><?= $banner['banner_status'] ?></td>
                                             <td>
                                                 <!-- edit -->
-                                                <a href="edit_banner.php?banner_id=<?= $banner['banner_id'] ?>" class="btn btn-success btn-sm">Edit</a>
+                                                <a href="edit_banner.php?id=<?= $banner['id'] ?>" class="btn btn-success btn-sm">Edit</a>
                                                 <!-- delete -->
-                                                <a onclick="javascript:return confirm('Are You Sure?')" href="delete_banner.php?banner_id=<?= $banner['banner_id'] ?>" class="btn btn-danger btn-sm">Delete</a>
+                                                <a onclick="javascript:return confirm('Are You Sure?')" href="delete_banner.php?id=<?= $banner['id'] ?>" class="btn btn-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
                                     <?php

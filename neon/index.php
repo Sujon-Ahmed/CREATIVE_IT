@@ -1,6 +1,6 @@
 <?php
 require 'db.php';
-$select_banner = "SELECT * FROM `banners`";
+$select_banner = "SELECT * FROM `banners` WHERE `banner_status`=1";
 $select_banner_result = mysqli_query($con, $select_banner);
 $after_assoc = mysqli_fetch_assoc($select_banner_result);
 

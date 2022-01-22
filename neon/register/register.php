@@ -5,7 +5,7 @@ if(!isset($_SESSION['welcome'])) {
 }
 require '../include/header.php';
 ?>
-<?php require '../dashboard_includes/header.php'; ?>
+<?php require '../dashboard_includes/header.php' ?>
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="sl-mainpanel">
 <nav class="breadcrumb sl-breadcrumb">
@@ -112,5 +112,5 @@ require '../include/header.php';
 </div><!-- sl-pagebody -->
 </div><!-- sl-mainpanel -->
 <!-- ########## END: MAIN PANEL ########## -->
-<?php require '../dashboard_includes/footer.php'; ?>
 <?php require '../include/footer.php' ?>
+<?php require '../dashboard_includes/footer.php' ?>
