@@ -42,7 +42,16 @@ $banners = mysqli_query($con,$select_banners);
                                             <td>
                                                 <img width="60" src="../uploads/banners/<?= $banner['banner_image'] ?>" alt="">
                                             </td>
-                                            <td><?= $banner['banner_description'] ?></td>
+                                            <td>
+                                                <?php 
+                                                    $description = $banner['banner_description'];
+                                                    if (strlen($description) > 40) {
+                                                        echo substr($description,0,40).'...';
+                                                    } else {
+                                                        echo $description;
+                                                    }
+                                                ?>
+                                            </td>
                                             <td><?= $banner['banner_created_at'] ?></td>
                                             <td>
                                                 <!-- edit -->

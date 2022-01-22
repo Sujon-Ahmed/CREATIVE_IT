@@ -4,13 +4,10 @@ if(!isset($_SESSION['welcome'])) {
     header('location:/Creative-IT/neon/login/login.php');
 }
 require '../db.php';
-if(isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $select_users = "SELECT * FROM users WHERE id=$id";
-    $select_users_result = mysqli_query($con,$select_users);
-    $after_assoc = mysqli_fetch_assoc($select_users_result);
-}
-
+$id = $_GET['id'];
+$select_users = "SELECT * FROM users WHERE id=$id";
+$select_users_result = mysqli_query($con,$select_users);
+$after_assoc = mysqli_fetch_assoc($select_users_result);
 require '../dashboard_includes/header.php';
 require '../include/header.php';
 ?>
@@ -38,7 +35,7 @@ require '../include/header.php';
                                     <!-- name input felid -->
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                        <input type="text" name="name" value="<?= (isset($_SESSION['name_error'])) ? '' : $after_assoc['name'] ?>" class="form-control" placeholder="Username">
+                                        <input type="text" name="name" value="<?= $after_assoc['name'] ?>" class="form-control" placeholder="Username">
                                     </div>
                                     <!-- name error message -->
                                     <?php 
@@ -51,7 +48,7 @@ require '../include/header.php';
                                     <!-- email input felid -->
                                     <div class="input-group mt-3">
                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
-                                        <input type="email" name="email" value="<?= (isset($_SESSION['email_error'])) ? '' : $after_assoc['email'] ?>" class="form-control" placeholder="Email">
+                                        <input type="email" name="email" value="<?= $after_assoc['email'] ?>" class="form-control" placeholder="Email">
                                     </div>
                                     <!-- name error message -->
                                     <?php 
