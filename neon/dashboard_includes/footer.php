@@ -17,5 +17,17 @@
       height: 150
       })
     </script>
+    <!-- success message -->
+    <?php if (isset($_SESSION['upload_success'])) {?>
+        <script>
+            Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: '<?= $_SESSION['upload_success'] ?>',
+            showConfirmButton: false,
+            timer: 1500
+            })
+        </script>
+    <?php } unset($_SESSION['upload_success']) ?>
   </body>
 </html>
