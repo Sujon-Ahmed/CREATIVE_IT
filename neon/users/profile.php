@@ -23,8 +23,8 @@ require("../dashboard_includes/header.php");
                                 <!-- input name felid -->
                                 <div class="mt-2">
                                     <label for="name">Name</label>
-                                    <input type="hidden" name="id" value="<?= $_SESSION['id'] ?>" class="form-control">
-                                    <input type="text" name="name" value="<?= $_SESSION['name'] ?>" id="name" placeholder="Enter Your Name" class="form-control">
+                                    <input type="hidden" name="id" value="<?= $after_assoc['id'] ?>" class="form-control">
+                                    <input type="text" name="name" value="<?= $after_assoc['name'] ?>" id="name" placeholder="Enter Your Name" class="form-control">
                                 </div>
                                 <!-- input password felid -->
                                 <div class="mt-2">

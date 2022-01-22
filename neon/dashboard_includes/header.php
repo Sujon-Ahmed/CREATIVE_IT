@@ -1,7 +1,9 @@
 <?php
-if(!isset($_SESSION['welcome'])) {
-  header('location:/Creative-IT/neon/login/login.php');
-}
+  include 'db.php';
+  $id = $_SESSION['id'];
+  $select_user = "SELECT * FROM users WHERE id=$id";
+  $result = mysqli_query($con, $select_user);
+  $after_assoc = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -111,8 +113,8 @@ if(!isset($_SESSION['welcome'])) {
         <nav class="nav">
           <div class="dropdown">
             <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
-              <span class="logged-name"><?= $_SESSION['name'] ?></span>
-              <img src="/Creative-IT/neon/uploads/users/<?= $_SESSION['profile_image'] ?>" class="wd-32 rounded-circle" alt="">
+              <span class="logged-name"><?= $after_assoc['name'] ?></span>
+              <img src="/Creative-IT/neon/uploads/users/<?= $after_assoc['profile_image'] ?>" class="wd-32 rounded-circle" alt="">
             </a>
             <div class="dropdown-menu dropdown-menu-header wd-200">
               <ul class="list-unstyled user-profile-nav">

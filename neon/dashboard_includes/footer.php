@@ -39,6 +39,18 @@
             })
         </script>
     <?php } unset($_SESSION['upload_success']) ?>
+    <!-- banner update success message -->
+    <?php if (isset($_SESSION['update_success'])) {?>
+        <script>
+            Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: '<?= $_SESSION['update_success'] ?>',
+            showConfirmButton: false,
+            timer: 1500
+            })
+        </script>
+    <?php } unset($_SESSION['update_success']) ?>
     <!-- banner file size error message -->
     <?php if (isset($_SESSION['large_file_error'])) {?>
         <script>

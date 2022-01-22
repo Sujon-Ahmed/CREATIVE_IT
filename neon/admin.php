@@ -1,6 +1,9 @@
 <?php 
 session_start();
-require '../neon/dashboard_includes/header.php';
+if(!isset($_SESSION['welcome'])) {
+    header('location:/Creative-IT/neon/login/login.php');
+}
+require 'dashboard_includes/header.php';
 ?>
 <!-- ########## START: MAIN PANEL ########## -->
 <!-- main panel -->

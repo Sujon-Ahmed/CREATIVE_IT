@@ -10,7 +10,7 @@ if (!isset($_POST['submit'])) {
     $password = $_POST['password'];
     $after_hash_password = password_hash($password, PASSWORD_BCRYPT);
     // check update felid
-    if (empty($after_hash_password)) {
+    if (empty($password)) {
         $update = "UPDATE `users` SET `name`='$name' WHERE id=$id";
         $result = mysqli_query($con, $update);
         header('location:profile.php?id='.$id);        
