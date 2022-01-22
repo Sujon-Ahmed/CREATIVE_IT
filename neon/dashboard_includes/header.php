@@ -63,6 +63,7 @@ if(!isset($_SESSION['welcome'])) {
             <span class="menu-item-label">Cards &amp; Widgets</span>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
+        <!-- user navigation bar -->
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="menu-item-icon ion-ios-people-outline tx-20"></i>
@@ -74,6 +75,19 @@ if(!isset($_SESSION['welcome'])) {
           <li class="nav-item"><a href="/Creative-IT/neon/register/register.php" class="nav-link">Add User</a></li>
           <li class="nav-item"><a href="/Creative-IT/neon/users/show.php" class="nav-link">View Users</a></li>
         </ul>
+        <!-- banner navigation bar -->
+        <a href="#" class="sl-menu-link">
+          <div class="sl-menu-item">
+            <i class="menu-item-icon ion-ios-people-outline tx-20"></i>
+            <span class="menu-item-label">Banners</span>
+            <i class="menu-item-arrow fa fa-angle-down"></i>
+          </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
+        <ul class="sl-menu-sub nav flex-column">
+          <li class="nav-item"><a href="/Creative-IT/neon/register/register.php" class="nav-link">Add Banner</a></li>
+          <li class="nav-item"><a href="/Creative-IT/neon/users/show.php" class="nav-link">View Banner</a></li>
+        </ul>
+        <!-- trashed user navigation bar -->
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="menu-item-icon ion-ios-trash-outline tx-20"></i>
