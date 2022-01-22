@@ -1,7 +1,6 @@
 <?php
 session_start();
 require("../dashboard_includes/header.php");
-
 ?>
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="sl-mainpanel">

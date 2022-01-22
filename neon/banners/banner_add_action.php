@@ -6,7 +6,7 @@ if (!isset($_POST['submit'])) {
 } else {
     $sub_title = $_POST['sub_title'];
     $title = $_POST['title'];
-    $description = $_POST['description'];
+    $description = mysqli_real_escape_string($con, $_POST['description']);
     if ($sub_title != '' && $title != '' && $description != '') {
          // image upload here
     if (!empty($_FILES['file']['name'])) {

@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
                         $file_new_name = uniqid('',true).'.'.$actual_extension;
                         $file_destination = "../uploads/banners/".$file_new_name;
                         move_uploaded_file($file_tmp, $file_destination);
-                        unlink("../uploads/banners/".$after_assoc['banner_image']);
+                        unlink("../uploads/banners/".$old_image);
                         $update_data = "UPDATE `banners` SET `banner_sub_title`='$sub_title',`banner_title`='$title',`banner_description`='$description',`banner_image`='$file_new_name' WHERE `banner_id` = $id";
                         $update_data_result = mysqli_query($con, $update_data);
                         $_SESSION['update_success'] = "Banner Update Successfully";
