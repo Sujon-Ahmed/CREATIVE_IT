@@ -9,8 +9,8 @@ require '../include/header.php';
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="sl-mainpanel">
 <nav class="breadcrumb sl-breadcrumb">
-<a class="breadcrumb-item" href="index.html">Neon</a>
-<a class="breadcrumb-item" href="index.html">Users</a>
+<a class="breadcrumb-item" href="/Creative-IT/neon/admin.php">Neon</a>
+<a class="breadcrumb-item" href="/Creative-IT/neon/users/show.php">Users</a>
 <span class="breadcrumb-item active">Register</span>
 </nav>
 

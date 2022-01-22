@@ -1,5 +1,4 @@
 <?php
-session_start();
 if(!isset($_SESSION['welcome'])) {
   header('location:/Creative-IT/neon/login/login.php');
 }
@@ -36,6 +35,9 @@ if(!isset($_SESSION['welcome'])) {
     <link href="/Creative-IT/neon/dashboard_assets/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <!-- dataTable -->
     <link href="/Creative-IT/neon/dashboard_assets/lib/datatables/jquery.dataTables.css" rel="stylesheet">
+    <!-- summer note cdn link -->
+    <link href="/Creative-IT/neon/dashboard_assets/lib/summernote/summernote.css" rel="stylesheet">
+    <link href="/Creative-IT/neon/dashboard_assets/lib/summernote/summernote-bs4.css" rel="stylesheet">
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="/Creative-IT/neon/dashboard_assets/css/starlight.css">
   </head>
@@ -57,12 +59,7 @@ if(!isset($_SESSION['welcome'])) {
             <span class="menu-item-label">Dashboard</span>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
-        <a href="widgets.html" class="sl-menu-link">
-          <div class="sl-menu-item"> 
-            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
-            <span class="menu-item-label">Cards &amp; Widgets</span>
-          </div><!-- menu-item -->
-        </a><!-- sl-menu-link -->
+        <!-- sl-menu-link -->
         <!-- user navigation bar -->
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
@@ -78,13 +75,13 @@ if(!isset($_SESSION['welcome'])) {
         <!-- banner navigation bar -->
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
-            <i class="menu-item-icon ion-ios-people-outline tx-20"></i>
+            <i class="menu-item-icon ion-ios-photos-outline tx-20"></i>
             <span class="menu-item-label">Banners</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-          <li class="nav-item"><a href="/Creative-IT/neon/register/register.php" class="nav-link">Add Banner</a></li>
+          <li class="nav-item"><a href="/Creative-IT/neon/banners/add_banner.php" class="nav-link">Add Banner</a></li>
           <li class="nav-item"><a href="/Creative-IT/neon/users/show.php" class="nav-link">View Banner</a></li>
         </ul>
         <!-- trashed user navigation bar -->
