@@ -1,0 +1,69 @@
+* {
+    transition: all 0.3s;
+}
+a {
+    text-decoration: none;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #ff7979;
+}
+.container {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.card {
+    width: 60vw;
+}
+.col-md-4 img {
+    height: 420px;
+}
+.card .title {
+    color: tomato;
+}
+span i {
+    color: rgb(238, 98, 74);
+}
+.button {
+    width: 120px;
+    height: 35px;
+    background: tomato;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.button:hover {
+    background: rgb(223, 41, 9);
+}
+i.fa-eye {
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.col-md-6 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* responsive card */
+@media(max-width:999px) {
+    .card {
+        width: 80vw;
+        margin: auto;
+    }
+}
+@media(max-width:768px) {
+    .card {
+        width: 100%;
+        margin: 9%;
+    }
+    .col-md-4 img {
+        width: 100%;
+    }
+}

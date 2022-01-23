@@ -15,8 +15,8 @@ require '../include/header.php';
 </nav>
 
 <div class="sl-pagebody">
-<div class="row m-auto">
-    <div class="col-lg-6">
+<div class="row">
+    <div class="col-lg-10 m-auto">
         <div class="card mb-3 shadow">
             <div class="row g-0">
                 <div class="col-md-4 col-sm-12">
@@ -44,7 +44,7 @@ require '../include/header.php';
                             <!-- name input felid -->
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                <input type="text" name="name" class="form-control" placeholder="Username">
+                                <input type="text" name="name"  class="form-control" placeholder="Username">
                             </div>
                             <!-- name error message -->
                             <?php 
@@ -71,7 +71,7 @@ require '../include/header.php';
                             <div class="input-group mt-3 position-relative">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
                                 <input type="password" name="password" id="pass" class="form-control" placeholder="Password">
-                                <i class="fa fa-eye position-absolute" id="click"></i>
+                                <i class="fa fa-eye position-absolute" id="click" style="right: 10px; top:10px;"></i>
                             </div>
                             <!-- password error message -->
                             <?php
