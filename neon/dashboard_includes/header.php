@@ -1,8 +1,16 @@
 <?php
+<<<<<<< HEAD
 require 'db.php';
 $select_users = "SELECT * FROM users";
 $select_users_result = mysqli_query($con, $select_users);
 $after_assoc_user = mysqli_fetch_assoc($select_users_result);
+=======
+  include 'db.php';
+  $id = $_SESSION['id'];
+  $select_user = "SELECT * FROM users WHERE id=$id";
+  $result = mysqli_query($con, $select_user);
+  $after_assoc = mysqli_fetch_assoc($result);
+>>>>>>> 4b9379fab0f85fc388ce9d865d9ab95d79a028de
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +44,9 @@ $after_assoc_user = mysqli_fetch_assoc($select_users_result);
     <link href="/Creative-IT/neon/dashboard_assets/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <!-- dataTable -->
     <link href="/Creative-IT/neon/dashboard_assets/lib/datatables/jquery.dataTables.css" rel="stylesheet">
+    <!-- summer note cdn link -->
+    <link href="/Creative-IT/neon/dashboard_assets/lib/summernote/summernote.css" rel="stylesheet">
+    <link href="/Creative-IT/neon/dashboard_assets/lib/summernote/summernote-bs4.css" rel="stylesheet">
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="/Creative-IT/neon/dashboard_assets/css/starlight.css">
   </head>
@@ -57,7 +68,12 @@ $after_assoc_user = mysqli_fetch_assoc($select_users_result);
             <span class="menu-item-label">Dashboard</span>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
+<<<<<<< HEAD
         <!-- users  -->
+=======
+        <!-- sl-menu-link -->
+        <!-- user navigation bar -->
+>>>>>>> 4b9379fab0f85fc388ce9d865d9ab95d79a028de
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="menu-item-icon ion-ios-people-outline tx-20"></i>
@@ -69,7 +85,11 @@ $after_assoc_user = mysqli_fetch_assoc($select_users_result);
           <li class="nav-item"><a href="/Creative-IT/neon/register/register.php" class="nav-link">Add User</a></li>
           <li class="nav-item"><a href="/Creative-IT/neon/users/show.php" class="nav-link">View Users</a></li>
         </ul>
+<<<<<<< HEAD
         <!-- banners -->
+=======
+        <!-- banner navigation bar -->
+>>>>>>> 4b9379fab0f85fc388ce9d865d9ab95d79a028de
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="menu-item-icon ion-ios-photos-outline tx-20"></i>
@@ -78,10 +98,17 @@ $after_assoc_user = mysqli_fetch_assoc($select_users_result);
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
+<<<<<<< HEAD
           <li class="nav-item"><a href="/Creative-IT/neon/banners/add_banner.php" class="nav-link">Add User</a></li>
           <li class="nav-item"><a href="/Creative-IT/neon/banners/view_banner.php" class="nav-link">View Users</a></li>
         </ul>
         <!-- trashed users -->
+=======
+          <li class="nav-item"><a href="/Creative-IT/neon/banners/add_banner.php" class="nav-link">Add Banner</a></li>
+          <li class="nav-item"><a href="/Creative-IT/neon/banners/view_banner.php" class="nav-link">View Banner</a></li>
+        </ul>
+        <!-- trashed user navigation bar -->
+>>>>>>> 4b9379fab0f85fc388ce9d865d9ab95d79a028de
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="menu-item-icon ion-ios-trash-outline tx-20"></i>
@@ -108,8 +135,13 @@ $after_assoc_user = mysqli_fetch_assoc($select_users_result);
         <nav class="nav">
           <div class="dropdown">
             <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+<<<<<<< HEAD
               <span class="logged-name"><?= $after_assoc_user['name'] ?></span>
               <img src="/Creative-IT/neon/uploads/users/<?= $after_assoc_user['profile_image'] ?>" class="wd-32 rounded-circle" alt="">
+=======
+              <span class="logged-name"><?= $after_assoc['name'] ?></span>
+              <img src="/Creative-IT/neon/uploads/users/<?= $after_assoc['profile_image'] ?>" class="wd-32 rounded-circle" alt="">
+>>>>>>> 4b9379fab0f85fc388ce9d865d9ab95d79a028de
             </a>
             <div class="dropdown-menu dropdown-menu-header wd-200">
               <ul class="list-unstyled user-profile-nav">
